@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Blog espiritual de Aizen Mystic: artículos sobre sanación, energía, tarot, astrología china y transformación interior.">
+  <title>Blog Espiritual | Aizen Mystic</title>
+
+  <!-- Fuentes locales -->
+  <style>
+    @font-face {
+      font-family: 'Adobe Devanagari';
+      src: url('fonts/AdobeDevanagari-Regular.woff2') format('woff2'),
+           url('fonts/AdobeDevanagari-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SybillaPro-Book';
+      src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
+           url('fonts/SybillaPro-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+     @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+    :root {
+      --font-devanagari: 'Adobe Devanagari', serif;
+      --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
+    }
+
+    body {
+      font-family: var(--font-sybilla);
+      color: #1A1A1A;
+    }
+
+    h1, h2, h3, .highlight {
+      font-family: var(--font-devanagari);
+    }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Aizen Mystic" class="logo-img">
+        <span class="logo-text">AIZEN MYSTIC</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+        <div class="nav-actions">
+          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
+            <span class="nav-cart-icon">🛒</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+            <span class="lang-icon">🌐</span>
+          </a>
+        </div>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero del Blog -->
+  <section class="hero-blog">
+    <div class="hero-content">
+      <h1>Reflexiones <span class="highlight">para el Alma</span></h1>
+      <p>Artículos sobre sanación, energía, arquetipos y el camino espiritual. Para almas en transformación.</p>
+      <a href="#articulos" class="btn-primary">Leer artículos</a>
+    </div>
+    <div class="hero-bg" style="background-image: url('img/hero-blog.jpg');"></div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="blog-filters">
+    <div class="container">
+      <div class="filters">
+        <a href="#" class="filter-btn active">Todos</a>
+        <a href="#" class="filter-btn">Sanación</a>
+        <a href="#" class="filter-btn">Tarot</a>
+        <a href="#" class="filter-btn">Astrología</a>
+        <a href="#" class="filter-btn">Meditación</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artículos del Blog -->
+  <section class="blog-posts" id="articulos">
+    <div class="container">
+      <div class="posts-grid">
+        
+        <!-- Artículo 1 -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/post-sanacion.jpg" alt="Cómo sanar bloqueos energéticos" class="post-img">
+          <div class="post-content">
+            <span class="post-category">Sanación</span>
+            <h3>¿Cómo sanar bloqueos energéticos sin salir de casa?</h3>
+            <p>Descubre técnicas simples pero profundas para liberar cargas emocionales y restaurar tu flujo energético desde tu altar personal.</p>
+            <a href="post.html?id=1" class="btn-text">Leer más →</a>
+          </div>
+        </article>
+
+        <!-- Artículo 2 -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="img/post-tarot.jpg" alt="Tarot Evolutivo" class="post-img">
+          <div class="post-content">
+            <span class="post-category">Tarot</span>
+            <h3>Tarot Evolutivo: más que predicción, es autoconocimiento</h3>
+            <p>Aprende cómo usar las cartas no para adivinar el futuro, sino para entender tus patrones y tomar decisiones alineadas.</p>
+            <a href="post.html?id=2" class="btn-text">Leer más →</a>
+          </div>
+        </article>
+
+        <!-- Artículo 3 -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="img/post-astrologia.jpg" alt="Astrología China" class="post-img">
+          <div class="post-content">
+            <span class="post-category">Astrología</span>
+            <h3>Los 4 Pilares del Destino: lo que tu nacimiento revela</h3>
+            <p>Una introducción a la astrología china y cómo los pilares de Año, Mes, Día y Hora definen tu energía y propósito.</p>
+            <a href="post.html?id=3" class="btn-text">Leer más →</a>
+          </div>
+        </article>
+
+        <!-- Artículo 4 -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="500">
+          <img src="img/post-meditacion.jpg" alt="Meditación japonesa" class="post-img">
+          <div class="post-content">
+            <span class="post-category">Meditación</span>
+            <h3>El silencio que transforma: meditación al estilo japonés</h3>
+            <p>Aprende a conectar con tu centro a través del wabi-sabi, el ma (espacio vacío) y la atención plena sin esfuerzo.</p>
+            <a href="post.html?id=4" class="btn-text">Leer más →</a>
+          </div>
+        </article>
+
+        <!-- Artículo 5 -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="600">
+          <img src="img/post-arquetipos.jpg" alt="Arquetipos de Jung" class="post-img">
+          <div class="post-content">
+            <span class="post-category">Autoconocimiento</span>
+            <h3>¿Qué arquetipo rige tu vida? Descúbrelo aquí</h3>
+            <p>El Héroe, el Sabio, el Amante… identifica los arquetipos que dominan tu inconsciente y aprende a integrarlos.</p>
+            <a href="post.html?id=5" class="btn-text">Leer más →</a>
+          </div>
+        </article>
+
+        <!-- Artículo 6 -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="700">
+          <img src="img/post-relaciones.jpg" alt="Relaciones sanas" class="post-img">
+          <div class="post-content">
+            <span class="post-category">Relaciones</span>
+            <h3>Comunicación asertiva: cómo hablar desde el poder, no desde el miedo</h3>
+            <p>Herramientas prácticas para fortalecer tus vínculos sin perder tu esencia.</p>
+            <a href="post.html?id=6" class="btn-text">Leer más →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Recibe guías espirituales</h2>
+      <p>Únete a nuestra comunidad y recibe contenido exclusivo, meditaciones y invitaciones a talleres.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Tu correo electrónico" required />
+        <button type="submit" class="btn-primary">Suscribirme</button>
+      </form>
+      <p class="small">Prometemos no enviar spam. Solo luz.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
+          <p>Transforma tu energía. Evoluciona tu alma.</p>
+        </div>
+        <div class="footer-contact">
+          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
+        </div>
+        <div class="footer-social">
+          <p>Sígueme en:</p>
+          <div class="social-links">
+            <a href="#" target="_blank">Instagram</a> •
+            <a href="#" target="_blank">YouTube</a> •
+            <a href="#" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
+          <p><a href="#">Política de privacidad</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    function toggleLang(e) {
+      e.preventDefault();
+      const icon = document.querySelector('.lang-icon');
+      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+    }
+  </script>
+</body>
+</html>

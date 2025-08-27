@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Servicios espirituales de Aizen Mystic: Reprogramación, Tarot Evolutivo, Arquetipos, Astrología China y más. Transforma tu energía interior.">
+  <title>Servicios Espirituales | Aizen Mystic</title>
+
+  <!-- Fuentes locales -->
+  <style>
+    @font-face {
+      font-family: 'Adobe Devanagari';
+      src: url('fonts/AdobeDevanagari-Regular.woff2') format('woff2'),
+           url('fonts/AdobeDevanagari-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SybillaPro-Book';
+      src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
+           url('fonts/SybillaPro-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+     @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+    :root {
+      --font-devanagari: 'Adobe Devanagari', serif;
+      --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
+    }
+
+    body {
+      font-family: var(--font-sybilla);
+      color: #1A1A1A;
+    }
+
+    h1, h2, h3, .highlight {
+      font-family: var(--font-devanagari);
+    }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Aizen Mystic" class="logo-img">
+        <span class="logo-text">AIZEN MYSTIC</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html" class="active">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+        <div class="nav-actions">
+          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
+            <span class="nav-cart-icon">🛒</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+            <span class="lang-icon">🌐</span>
+          </a>
+        </div>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero de Servicios -->
+  <section class="hero-services">
+    <div class="hero-content">
+      <h1>Tu <span class="highlight">Camino Interior</span></h1>
+      <p>Explora servicios espirituales diseñados para transformar tu energía, sanar tu pasado y alinearte con tu propósito.</p>
+      <a href="contacto.html" class="btn-primary">Agenda tu sesión</a>
+    </div>
+    <div class="hero-bg" style="background-image: url('img/hero-servicios.jpg');"></div>
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section class="services-grid-container">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Nuestros Servicios</h2>
+
+      <!-- Servicio 1 -->
+      <div class="service-card-full" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-image">
+          <img src="img/servicio-reprogramacion.jpg" alt="Reprogramación de Sistema de Valores">
+        </div>
+        <div class="service-content">
+          <h3>🌟 Reprogramación de Sistema de Valores</h3>
+          <p><strong>Descripción:</strong> Sesión personalizada para detectar y corregir bloqueos energéticos, patrones limitantes, creencias arraigadas y ciclos repetitivos que afectan tu bienestar físico, emocional y espiritual. Se utilizan gráficos, simbología hebrea y péndulos para explorar desequilibrios incluso en vidas pasadas o paralelas.</p>
+          <p><strong>Duración:</strong> 45 a 60 min</p>
+          <p><strong>Honorarios:</strong> 45 USD</p>
+          <a href="contacto.html" class="btn-small">Agendar ahora</a>
+        </div>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="service-card-full" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-image">
+          <img src="img/servicio-tarot-evolutivo.jpg" alt="Tarot Evolutivo">
+        </div>
+        <div class="service-content">
+          <h3>🔮 Tarot Evolutivo</h3>
+          <p><strong>Descripción:</strong> Más que predecir el futuro, esta terapia utiliza el tarot como herramienta de autoconocimiento. Te ayuda a comprender patrones de conducta, creencias limitantes y bloqueos emocionales, para que puedas tomar decisiones conscientes y alineadas con tus valores y propósito de vida.</p>
+          <p><strong>Duración:</strong> 1 sesión</p>
+          <p><strong>Honorarios:</strong> 42 USD</p>
+          <a href="contacto.html" class="btn-small">Agendar ahora</a>
+        </div>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="service-card-full" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-image">
+          <img src="img/servicio-tarot-egipcio.jpg" alt="Tarot Egipcio">
+        </div>
+        <div class="service-content">
+          <h3>🏺 Tarot Egipcio</h3>
+          <p><strong>Descripción:</strong> Basado en los símbolos y arquetipos de la antigua civilización egipcia, esta terapia permite conectar con tu esencia espiritual. Ayuda a transformar bloqueos, patrones de conducta y creencias que limitan tu expansión personal, mental y emocional.</p>
+          <p><strong>Duración:</strong> 1 sesión</p>
+          <p><strong>Honorarios:</strong> 54 USD</p>
+          <a href="contacto.html" class="btn-small">Agendar ahora</a>
+        </div>
+      </div>
+
+      <!-- Servicio 4 -->
+      <div class="service-card-full" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-image">
+          <img src="img/servicio-arquetipos.jpg" alt="Arquetipos de Conciencia">
+        </div>
+        <div class="service-content">
+          <h3>🧠 Arquetipos de Conciencia – El Viaje Interior</h3>
+          <p><strong>Descripción:</strong> Estudio profundo del inconsciente basado en los arquetipos de Carl Jung (Héroe, Sabio, Amante, etc.). Mediante test y análisis personalizado, descubrirás los arquetipos dominantes en tu vida, entenderás cómo influyen en tus decisiones y aprenderás a integrarlos para lograr equilibrio emocional y autoconocimiento.</p>
+          <p><strong>Incluye:</strong> Estudio detallado enviado en PDF + 3 sesiones de asesoría personalizadas</p>
+          <p><strong>Honorarios:</strong> 250 USD</p>
+          <a href="contacto.html" class="btn-small">Agendar ahora</a>
+        </div>
+      </div>
+
+      <!-- Servicio 5 -->
+      <div class="service-card-full" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-image">
+          <img src="img/servicio-coaching.jpg" alt="Coaching Máster en Relaciones">
+        </div>
+        <div class="service-content">
+          <h3>🤝 Coaching Máster en Relaciones Personales</h3>
+          <p><strong>Descripción:</strong> Terapia conductual enfocada en mejorar tus relaciones personales e interpersonales. Aprenderás técnicas de comunicación asertiva, resolución de conflictos, empoderamiento emocional y fortalecimiento de vínculos. Ideal para relaciones de pareja, familia, negocios y crecimiento personal.</p>
+          <p><strong>Duración:</strong> 45 min + 15 min de feedback</p>
+          <p><strong>Honorarios:</strong> 54 USD</p>
+          <a href="contacto.html" class="btn-small">Agendar ahora</a>
+        </div>
+      </div>
+
+      <!-- Servicio 6 -->
+      <div class="service-card-full" data-aos="fade-up" data-aos-delay="700">
+        <div class="service-image">
+          <img src="img/servicio-astrologia.jpg" alt="Astrología China - Bazi">
+        </div>
+        <div class="service-content">
+          <h3>🐉 Astrología China – Los 4 Pilares del Destino (Bazi)</h3>
+          <p><strong>Descripción:</strong> Antigua técnica de la astrología china que analiza tu destino y personalidad basándose en tu fecha y hora de nacimiento. Los cuatro pilares (Año, Mes, Día y Hora) revelan tus energías dominantes, fortalezas, desafíos y momentos propicios para tomar decisiones importantes.</p>
+          <p><strong>Incluye:</strong> Estudio completo de 10 días + 2 consultas personalizadas</p>
+          <p><strong>Honorarios:</strong> 300 USD</p>
+          <a href="contacto.html" class="btn-small">Agendar ahora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-full" data-aos="fade-up">
+    <div class="container">
+      <h2>¿Listo para tu transformación?</h2>
+      <p>Agenda tu primera sesión y comienza tu viaje de sanación, crecimiento y evolución.</p>
+      <a href="contacto.html" class="btn-primary">Agenda ahora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
+          <p>Transforma tu energía. Evoluciona tu alma.</p>
+        </div>
+        <div class="footer-contact">
+          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
+        </div>
+        <div class="footer-social">
+          <p>Sígueme en:</p>
+          <div class="social-links">
+            <a href="#" target="_blank">Instagram</a> •
+            <a href="#" target="_blank">YouTube</a> •
+            <a href="#" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
+          <p><a href="#">Política de privacidad</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    function toggleLang(e) {
+      e.preventDefault();
+      const icon = document.querySelector('.lang-icon');
+      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+    }
+  </script>
+</body>
+</html>

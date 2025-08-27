@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Conoce a Auristela Izquierdo, guía espiritual de Aizen Mystic. Sanación energética, mentoría y transformación interior con enfoque japonés y occidental.">
+  <title>Sobre Mí | Aizen Mystic</title>
+
+  <!-- Fuentes locales -->
+  <style>
+    @font-face {
+      font-family: 'Adobe Devanagari';
+      src: url('fonts/AdobeDevanagari-Regular.woff2') format('woff2'),
+           url('fonts/AdobeDevanagari-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SybillaPro-Book';
+      src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
+           url('fonts/SybillaPro-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+     @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+    :root {
+      --font-devanagari: 'Adobe Devanagari', serif;
+      --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
+    }
+
+    body {
+      font-family: var(--font-sybilla);
+      color: #1A1A1A;
+    }
+
+    h1, h2, h3, .highlight {
+      font-family: var(--font-devanagari);
+    }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Aizen Mystic" class="logo-img">
+        <span class="logo-text">AIZEN MYSTIC</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-mi.html" class="active">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+        <div class="nav-actions">
+          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
+            <span class="nav-cart-icon">🛒</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+            <span class="lang-icon">🌐</span>
+          </a>
+        </div>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero de Sobre Mí -->
+  <section class="hero-about">
+    <div class="hero-content">
+      <h1>El <span class="highlight">Camino de la Guía</span></h1>
+      <p>Una historia de transformación, sanación y conexión con lo más profundo del ser.</p>
+      <a href="contacto.html" class="btn-primary">Agenda una sesión</a>
+    </div>
+    <div class="hero-bg" style="background-image: url('img/hero-sobre-mi.jpg');"></div>
+  </section>
+
+  <!-- Sección Principal -->
+  <section class="about-main">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Foto -->
+        <div class="about-image" data-aos="fade-right">
+          <img src="img/foto-auristela.jpg" alt="Auristela Izquierdo - Guía Espiritual">
+        </div>
+
+        <!-- Texto -->
+        <div class="about-content" data-aos="fade-left">
+          <h2>¿Quién soy?</h2>
+          <p>
+            <!-- Aquí irá el texto del cliente -->
+            [Texto del cliente en proceso de redacción. Aquí se contará tu historia personal, tu formación, tu despertar espiritual, y cómo llegaste a crear Aizen Mystic. Se integrarán elementos de tu enfoque occidental y japonés, tu misión y tu propósito.]
+          </p>
+          <p>
+            Este espacio será un reflejo auténtico de tu esencia, tu experiencia y tu don para guiar almas en transformación.
+          </p>
+          <a href="contacto.html" class="btn-outline">Conecta conmigo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores o Pilares Espirituales -->
+  <section class="about-values">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Mis Pilares Espirituales</h2>
+      <div class="values-grid" data-aos="fade-up" data-aos-delay="300">
+        <div class="value-card">
+          <h3>🌸 Armonía Japonesa</h3>
+          <p>El silencio, el wabi-sabi y la aceptación como base para la transformación profunda.</p>
+        </div>
+        <div class="value-card">
+          <h3>🌀 Energía Occidental</h3>
+          <p>Sanación, reprogramación y evolución activa del ser a través de herramientas modernas.</p>
+        </div>
+        <div class="value-card">
+          <h3>📜 Sabiduría Ancestral</h3>
+          <p>Conexión con tradiciones espirituales de Oriente y Occidente para sanar el alma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-full">
+    <div class="container">
+      <h2>¿Listo para tu transformación?</h2>
+      <p>Agenda tu primera sesión y comienza tu viaje de sanación, crecimiento y evolución.</p>
+      <a href="contacto.html" class="btn-primary">Agenda ahora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
+          <p>Transforma tu energía. Evoluciona tu alma.</p>
+        </div>
+        <div class="footer-contact">
+          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
+        </div>
+        <div class="footer-social">
+          <p>Sígueme en:</p>
+          <div class="social-links">
+            <a href="#" target="_blank">Instagram</a> •
+            <a href="#" target="_blank">YouTube</a> •
+            <a href="#" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
+          <p><a href="#">Política de privacidad</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    function toggleLang(e) {
+      e.preventDefault();
+      const icon = document.querySelector('.lang-icon');
+      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+    }
+  </script>
+</body>
+</html>

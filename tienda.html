@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Tienda espiritual Aizen Mystic: cristales, inciensos, amuletos y artículos místicos seleccionados con intención. Envíos a todo el mundo.">
+  <title>Tienda de Artículos Místicos | Aizen Mystic</title>
+
+  <!-- Fuentes locales -->
+  <style>
+    @font-face {
+      font-family: 'Adobe Devanagari';
+      src: url('fonts/AdobeDevanagari-Regular.woff2') format('woff2'),
+           url('fonts/AdobeDevanagari-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SybillaPro-Book';
+      src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
+           url('fonts/SybillaPro-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+     @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+    :root {
+      --font-devanagari: 'Adobe Devanagari', serif;
+      --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
+    }
+
+    body {
+      font-family: var(--font-sybilla);
+      color: #1A1A1A;
+    }
+
+    h1, h2, h3, .highlight {
+      font-family: var(--font-devanagari);
+    }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Aizen Mystic" class="logo-img">
+        <span class="logo-text">AIZEN MYSTIC</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html" class="active">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+        <div class="nav-actions">
+          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
+            <span class="nav-cart-icon">🛒</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+            <span class="lang-icon">🌐</span>
+          </a>
+        </div>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero de Tienda -->
+  <section class="hero-shop">
+    <div class="hero-content">
+      <h1>Artículos <span class="highlight">Místicos con Intención</span></h1>
+      <p>Objetos energéticos seleccionados con propósito para tu altar, tu hogar y tu camino espiritual.</p>
+      <a href="#productos" class="btn-primary">Ver productos</a>
+    </div>
+    <div class="hero-bg" style="background-image: url('img/hero-tienda.jpg');"></div>
+  </section>
+
+  <!-- Filtros de Categoría -->
+  <section class="shop-filters">
+    <div class="container">
+      <div class="filters">
+        <a href="#" class="filter-btn active">Todos</a>
+        <a href="#" class="filter-btn">Cristales</a>
+        <a href="#" class="filter-btn">Incienso</a>
+        <a href="#" class="filter-btn">Amuletos</a>
+        <a href="#" class="filter-btn">Rituales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section class="shop-products" id="productos">
+    <div class="container">
+      <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="product-img-wrapper">
+            <img src="img/producto-amatista.jpg" alt="Amatista Sagrada" class="product-img">
+            <span class="product-badge">Popular</span>
+          </div>
+          <h3>Amatista Sagrada</h3>
+          <p class="product-desc">Cristal de alta vibración para protección y conexión espiritual.</p>
+          <p class="price">Desde $25</p>
+          <button class="btn-small">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="product-img-wrapper">
+            <img src="img/producto-incienso.jpg" alt="Incienso Shoyeido" class="product-img">
+          </div>
+          <h3>Incienso Shoyeido</h3>
+          <p class="product-desc">Armoniza tu espacio con fragancia japonesa de sándalo y jazmín.</p>
+          <p class="price">Desde $18</p>
+          <button class="btn-small">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="product-img-wrapper">
+            <img src="img/producto-amuleto.jpg" alt="Amuleto de Protección" class="product-img">
+          </div>
+          <h3>Amuleto de Protección</h3>
+          <p class="product-desc">Talismán energético grabado con símbolos ancestrales.</p>
+          <p class="price">Desde $30</p>
+          <button class="btn-small">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card" data-aos="zoom-in" data-aos-delay="500">
+          <div class="product-img-wrapper">
+            <img src="img/producto-vela.jpg" alt="Vela Ritual" class="product-img">
+            <span class="product-badge">Nuevo</span>
+          </div>
+          <h3>Vela Ritual de Luna</h3>
+          <p class="product-desc">Para limpieza energética y manifestación bajo la luna llena.</p>
+          <p class="price">Desde $22</p>
+          <button class="btn-small">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-card" data-aos="zoom-in" data-aos-delay="600">
+          <div class="product-img-wrapper">
+            <img src="img/producto-sahumerio.jpg" alt="Sahumerio Andino" class="product-img">
+          </div>
+          <h3>Sahumerio Andino</h3>
+          <p class="product-desc">Palo santo y hierbas sagradas para purificación y conexión.</p>
+          <p class="price">Desde $16</p>
+          <button class="btn-small">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-card" data-aos="zoom-in" data-aos-delay="700">
+          <div class="product-img-wrapper">
+            <img src="img/producto-aceite.jpg" alt="Aceite Sagrado" class="product-img">
+          </div>
+          <h3>Aceite de Presencia</h3>
+          <p class="product-desc">Mezcla sagrada para ungir cristales, altares y momentos de poder.</p>
+          <p class="price">Desde $28</p>
+          <button class="btn-small">Añadir al carrito</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Recibe guías espirituales</h2>
+      <p>Únete a nuestra comunidad y recibe contenido exclusivo, meditaciones y invitaciones a talleres.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Tu correo electrónico" required />
+        <button type="submit" class="btn-primary">Suscribirme</button>
+      </form>
+      <p class="small">Prometemos no enviar spam. Solo luz.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
+          <p>Transforma tu energía. Evoluciona tu alma.</p>
+        </div>
+        <div class="footer-contact">
+          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
+        </div>
+        <div class="footer-social">
+          <p>Sígueme en:</p>
+          <div class="social-links">
+            <a href="#" target="_blank">Instagram</a> •
+            <a href="#" target="_blank">YouTube</a> •
+            <a href="#" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
+          <p><a href="#">Política de privacidad</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    function toggleLang(e) {
+      e.preventDefault();
+      const icon = document.querySelector('.lang-icon');
+      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contacta con Aizen Mystic para agendar una sesión de sanación, mentoría o consulta espiritual. Respuesta en menos de 24 horas.">
+  <title>Contáctame | Aizen Mystic</title>
+
+  <!-- Fuentes locales -->
+  <style>
+    @font-face {
+      font-family: 'Adobe Devanagari';
+      src: url('fonts/AdobeDevanagari-Regular.woff2') format('woff2'),
+           url('fonts/AdobeDevanagari-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SybillaPro-Book';
+      src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
+           url('fonts/SybillaPro-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+     @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Brilliant Signature';
+    src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+    :root {
+      --font-devanagari: 'Adobe Devanagari', serif;
+      --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
+    }
+
+    body {
+      font-family: var(--font-sybilla);
+      color: #1A1A1A;
+    }
+
+    h1, h2, h3, .highlight {
+      font-family: var(--font-devanagari);
+    }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Aizen Mystic" class="logo-img">
+        <span class="logo-text">AIZEN MYSTIC</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="contacto.html" class="active">Contacto</a>
+        <div class="nav-actions">
+          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
+            <span class="nav-cart-icon">🛒</span>
+            <span class="nav-cart-count">0</span>
+          </a>
+          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+            <span class="lang-icon">🌐</span>
+          </a>
+        </div>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero de Contacto -->
+  <section class="hero-contact">
+    <div class="hero-content">
+      <h1>Conectemos <span class="highlight">desde el Alma</span></h1>
+      <p>¿Tienes dudas? ¿Quieres agendar una sesión? Escríbeme y responderé en menos de 24 horas.</p>
+    </div>
+    <div class="hero-bg" style="background-image: url('img/hero-contacto.jpg');"></div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Formulario -->
+        <div class="contact-form" data-aos="fade-right">
+          <h2>Envíame un mensaje</h2>
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu correo" required />
+            <select name="reason" required>
+              <option value="" disabled selected>Motivo del contacto</option>
+              <option value="servicio">Quiero agendar un servicio</option>
+              <option value="tienda">Consulta sobre la tienda</option>
+              <option value="sobre-mi">Quiero saber más sobre ti</option>
+              <option value="otro">Otro</option>
+            </select>
+            <textarea name="message" placeholder="Tu mensaje..." rows="5" required></textarea>
+            <button type="submit" class="btn-primary">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="contact-info" data-aos="fade-left">
+          <h3>¿Prefieres contactarme directamente?</h3>
+          <div class="contact-method">
+            <h4>💬 WhatsApp</h4>
+            <p>Respuesta rápida y personalizada.</p>
+            <a href="https://wa.me/584244369819" class="btn-secondary" target="_blank">
+              Escribir por WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-method">
+            <h4>✉️ Correo electrónico</h4>
+            <p>Para consultas formales o pedidos especiales.</p>
+            <p><a href="mailto:aurizquierdo21@gmail.com">aurizquierdo21@gmail.com</a></p>
+          </div>
+
+          <div class="contact-method">
+            <h4>📍 Zona horaria</h4>
+            <p>GMT-4 (Venezuela) · Atención de 9:00 a 18:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonio destacado -->
+  <section class="testimonial-highlight">
+    <div class="container">
+      <blockquote data-aos="fade-up">
+        "Auristela no solo es guía, es un faro en la niebla. Después de nuestra sesión, todo encajó."
+        <cite>— Lina, Colombia</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Recibe guías espirituales</h2>
+      <p>Únete a nuestra comunidad y recibe contenido exclusivo, meditaciones y invitaciones a talleres.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Tu correo electrónico" required />
+        <button type="submit" class="btn-primary">Suscribirme</button>
+      </form>
+      <p class="small">Prometemos no enviar spam. Solo luz.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
+          <p>Transforma tu energía. Evoluciona tu alma.</p>
+        </div>
+        <div class="footer-contact">
+          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
+        </div>
+        <div class="footer-social">
+          <p>Sígueme en:</p>
+          <div class="social-links">
+            <a href="#" target="_blank">Instagram</a> •
+            <a href="#" target="_blank">YouTube</a> •
+            <a href="#" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
+          <p><a href="#">Política de privacidad</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    function toggleLang(e) {
+      e.preventDefault();
+      const icon = document.querySelector('.lang-icon');
+      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+    }
+
+    // Formulario de contacto
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('¡Gracias por tu mensaje! Te responderé en menos de 24 horas.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
