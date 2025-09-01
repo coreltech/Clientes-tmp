@@ -26,21 +26,21 @@
       font-display: swap;
     }
 
-     @font-face {
-    font-family: 'Brilliant Signature';
-    src: url('fonts/Brilliant signature  regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+    @font-face {
+      font-family: 'Brilliant Signature';
+      src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  @font-face {
-    font-family: 'Brilliant Signature';
-    src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-  }
+    @font-face {
+      font-family: 'Brilliant Signature';
+      src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
 
     :root {
       --font-devanagari: 'Adobe Devanagari', serif;
@@ -68,6 +68,12 @@
 </head>
 <body>
 
+  <!-- Imagen animada personalizada -->
+  <div class="anim-element" id="animElement">
+    <img src="img/animacion.png" alt="Elemento animado giratorio" class="anim-img">
+  </div>
+
+  
   <!-- Header -->
   <header class="header" data-aos="fade-down">
     <div class="container">
@@ -99,6 +105,10 @@
   <!-- Hero de Servicios -->
   <section class="hero-services">
     <div class="hero-content">
+      <!-- Imagen logoux que aparece al final de la animación -->
+<div class="hero-logo-center" id="heroLogoCenter">
+  <img src="img/logoux.png" alt="Logoux Aizen Mystic" class="logoux-img">
+</div>
       <h1>Tu <span class="highlight">Camino Interior</span></h1>
       <p>Explora servicios espirituales diseñados para transformar tu energía, sanar tu pasado y alinearte con tu propósito.</p>
       <a href="contacto.html" class="btn-primary">Agenda tu sesión</a>
@@ -240,18 +250,65 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Inicializar AOS
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
+    // Menú móvil
     document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
       const nav = document.querySelector('.nav');
       nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Cambiar idioma
     function toggleLang(e) {
       e.preventDefault();
       const icon = document.querySelector('.lang-icon');
       icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
     }
-  </script>
+
+    // Animación de entrada con animacion.png
+  document.addEventListener('DOMContentLoaded', function () {
+    const animElement = document.getElementById('animElement');
+    const hero = document.querySelector('.hero-services');
+    const heroLogoCenter = document.getElementById('heroLogoCenter');
+
+    // Fase 1: Iniciar animación de entrada (izquierda → centro+)
+    setTimeout(() => {
+      animElement.style.opacity = '1';
+      animElement.classList.add('slide-center');
+    }, 300);
+
+    // Fase 2: Esperar a que termine la animación de entrada
+    animElement.addEventListener('animationend', function handler(e) {
+      // Solo actuar cuando termina slide-center, no slide-right
+      if (animElement.classList.contains('slide-center')) {
+        animElement.removeEventListener('animationend', handler);
+
+        // ✅ Ahora estamos en pausa visual
+        // Mostrar logoux.png con un leve retraso para que no sea abrupto
+        setTimeout(() => {
+          heroLogoCenter.classList.add('show');
+        }, 1000); // Aparece 100ms después de llegar
+
+        // Mostrar el hero al mismo tiempo
+        setTimeout(() => {
+          hero.style.opacity = '1';
+          hero.style.transform = 'translateY(0)';
+        }, 200);
+
+        // Fase 3: Después de 500ms de pausa, iniciar salida
+        setTimeout(() => {
+          animElement.classList.remove('slide-center');
+          animElement.classList.add('slide-right');
+
+          // Escuchar el final de la salida
+          animElement.addEventListener('animationend', () => {
+            animElement.style.display = 'none';
+          }, { once: true });
+        }, 500); // Duración de la pausa
+      }
+    });
+  });
+</script>
 </body>
 </html>

@@ -26,24 +26,25 @@
       font-display: swap;
     }
 
-  @font-face {
-    font-family: 'Brilliant Signature';
-    src: url('fonts/Brilliant signature  regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+    @font-face {
+      font-family: 'Brilliant Signature';
+      src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  @font-face {
-    font-family: 'Brilliant Signature';
-    src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-  }
-</style>
-  
+    @font-face {
+      font-family: 'Brilliant Signature';
+      src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
   </style>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css" />
@@ -53,66 +54,63 @@
 </head>
 <body>
 
-  <!-- Preloader / Portal Espiritual -->
+  <!-- === PRELOADER CON LOGO GIRANDO === -->
   <div id="preloader">
-    <div class="symbol">🌀</div>
-    <p>Bienvenido a tu transformación</p>
+    <img src="img/logo.png" alt="Logo Aizen Mystic" class="preloader-logo">
   </div>
 
   <!-- Header -->
-  <header class="header">
+  <header class="header" data-aos="fade-down">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="img/logo.png" alt="Aizen Mystic" class="logo-img">
         <span class="logo-text">AIZEN MYSTIC</span>
       </a>
-     <nav class="nav">
-  <a href="index.html">Inicio</a>
-  <a href="servicios.html">Servicios</a>
-  <a href="tienda.html">Tienda</a>
-  <a href="blog.html">Blog</a>
-  <a href="sobre-mi.html">Sobre Mí</a>
-  <a href="contacto.html">Contacto</a>
-
-  <!-- Grupo de acciones a la derecha -->
-  <div class="nav-actions">
-    <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
-      <svg class="nav-cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-  <circle cx="9" cy="21" r="1"></circle>
-  <circle cx="20" cy="21" r="1"></circle>
-  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-</svg>
-      <span class="nav-cart-count">0</span>
-    </a>
-    <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
-      <span class="lang-icon">🌐</span>
-    </a>
-  </div>
-</nav>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+        <div class="nav-actions">
+          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
+            <svg class="nav-cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="nav-cart-count">0</span>
+          </a>
+          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+            <span class="lang-icon">🌐</span>
+          </a>
+        </div>
+      </nav>
       <div class="mobile-toggle">☰</div>
     </div>
   </header>
 
-  <!-- Hero Section (Asimétrico japonés + símbolo animado) -->
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-symbol">
+    <div class="hero-symbol" data-aos="fade-left">
       <span>🌸</span>
     </div>
-    <div class="hero-content">
+    <div class="hero-content" data-aos="fade-right">
       <h1>Transforma tu <span class="highlight">energía interior</span></h1>
       <p>Guía espiritual para almas en búsqueda de sanación, evolución y propósito.</p>
-      <div class="cta-group" style="text-align: right;">
+      <div class="cta-group">
         <a href="servicios.html" class="btn-primary">Descubre tus servicios</a>
         <a href="contacto.html" class="btn-secondary">Agenda tu sesión</a>
       </div>
     </div>
-    <div class="hero-bg"></div>
+    <div class="hero-bg" style="background-image: url('img/hero-bg.jpg');"></div>
   </section>
 
   <!-- Breve Introducción -->
   <section class="intro">
     <div class="container">
-      <div class="intro-box">
+      <div class="intro-box" data-aos="fade-up">
         <h2>¿Quién es Aizen Mystic?</h2>
         <p>Un espacio sagrado creado por <strong>Auristela Izquierdo</strong> para acompañarte en tu camino de transformación espiritual. Con técnicas ancestrales y enfoque intuitivo, te guío hacia tu equilibrio, claridad y poder interior.</p>
         <a href="sobre-mi.html" class="btn-text">Conoce mi historia →</a>
@@ -120,11 +118,11 @@
     </div>
   </section>
 
-  <!-- Servicios Destacados (versión con imágenes IA) -->
+  <!-- Servicios Destacados -->
   <section class="services-preview">
     <div class="container">
-      <h2 class="section-title">Campos de Transformación</h2>
-      <div class="services-grid">
+      <h2 class="section-title" data-aos="fade-up">Campos de Transformación</h2>
+      <div class="services-grid" data-aos="fade-up" data-aos-delay="300">
         <div class="service-card">
           <img src="img/servicio-akashic.jpg" alt="Lectura Akáshica" class="service-img">
           <h3>Lectura Akáshica</h3>
@@ -144,7 +142,7 @@
           <a href="servicios.html#mentoría" class="btn-small">Más info</a>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center" data-aos="fade-up" data-aos-delay="500">
         <a href="servicios.html" class="btn-outline">Ver todos los servicios</a>
       </div>
     </div>
@@ -153,10 +151,9 @@
   <!-- Tienda Destacada -->
   <section class="shop-preview">
     <div class="container">
-      <h2 class="section-title">Artículos Místicos</h2>
+      <h2 class="section-title" data-aos="fade-up">Artículos Místicos</h2>
       <p class="shop-intro">Objetos energéticos seleccionados con intención para tu altar personal.</p>
-      <div class="shop-grid">
-        <!-- Producto 1: Amatista Sagrada -->
+      <div class="shop-grid" data-aos="fade-up" data-aos-delay="300">
         <div class="product-card">
           <img src="img/producto-amatista.jpg" alt="Amatista Sagrada" class="product-img">
           <h3>Amatista Sagrada</h3>
@@ -164,8 +161,6 @@
           <p class="price">Desde $25</p>
           <button class="btn-small">Añadir al carrito</button>
         </div>
-
-        <!-- Producto 2: Incienso Japonés -->
         <div class="product-card">
           <img src="img/producto-incienso.jpg" alt="Incienso Shoyeido" class="product-img">
           <h3>Incienso Shoyeido</h3>
@@ -173,8 +168,6 @@
           <p class="price">Desde $18</p>
           <button class="btn-small">Añadir al carrito</button>
         </div>
-
-        <!-- Producto 3: Amuleto de Protección -->
         <div class="product-card">
           <img src="img/producto-amuleto.jpg" alt="Amuleto de Protección" class="product-img">
           <h3>Amuleto de Protección</h3>
@@ -183,7 +176,7 @@
           <button class="btn-small">Añadir al carrito</button>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center" data-aos="fade-up" data-aos-delay="500">
         <a href="tienda.html" class="btn-outline">Ver toda la tienda</a>
       </div>
     </div>
@@ -192,8 +185,8 @@
   <!-- Testimonios -->
   <section class="testimonials">
     <div class="container">
-      <h2 class="section-title">Voces de Transformación</h2>
-      <div class="testimonial-grid">
+      <h2 class="section-title" data-aos="fade-up">Voces de Transformación</h2>
+      <div class="testimonial-grid" data-aos="fade-up" data-aos-delay="300">
         <blockquote>
           "Después de la lectura akáshica, todo encajó. Sentí paz y claridad como nunca."
           <cite>— María, España</cite>
@@ -213,9 +206,9 @@
   <!-- Newsletter -->
   <section class="newsletter">
     <div class="container">
-      <h2>Recibe guías espirituales</h2>
-      <p>Únete a nuestra comunidad y recibe contenido exclusivo, meditaciones y invitaciones a talleres.</p>
-      <form class="newsletter-form">
+      <h2 data-aos="fade-up">Recibe guías espirituales</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Únete a nuestra comunidad y recibe contenido exclusivo, meditaciones y invitaciones a talleres.</p>
+      <form class="newsletter-form" data-aos="fade-up" data-aos-delay="200">
         <input type="email" placeholder="Tu correo electrónico" required />
         <button type="submit" class="btn-primary">Suscribirme</button>
       </form>
@@ -223,12 +216,7 @@
     </div>
   </section>
 
-  <!-- Separador simbólico opcional -->
-  <div class="divider">
-    <span>✿</span>
-  </div>
-
-  <!-- Footer Minimalista -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -236,12 +224,10 @@
           <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
           <p>Transforma tu energía. Evoluciona tu alma.</p>
         </div>
-
         <div class="footer-contact">
           <h5>✉️ aurizquierdo21@gmail.com</h5>
           <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
         </div>
-
         <div class="footer-social">
           <p>Sígueme en:</p>
           <div class="social-links">
@@ -250,7 +236,6 @@
             <a href="#" target="_blank">TikTok</a>
           </div>
         </div>
-
         <div class="footer-legal">
           <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
           <p><a href="#">Política de privacidad</a></p>
@@ -260,22 +245,32 @@
   </footer>
 
   <!-- WhatsApp Flotante -->
-  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank">💬</a>
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
 
   <!-- Scripts -->
-  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Inicializar AOS
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-  // Cambio de idioma (ejemplo básico)
-function toggleLang(e) {
-  e.preventDefault();
-  const current = document.querySelector('.lang-icon');
-  if (current.textContent === '🌐') {
-    current.textContent = '🌎'; // Puedes usar otro ícono
-    alert('Idioma cambiado a Inglés');
-  } else {
-    current.textContent = '🌐';
-    alert('Idioma cambiado a Español');
-  }
-}
+    // Menú móvil
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Cambio de idioma
+    function toggleLang(e) {
+      e.preventDefault();
+      const icon = document.querySelector('.lang-icon');
+      if (icon.textContent === '🌐') {
+        icon.textContent = '🌎';
+        alert('Idioma cambiado a Inglés');
+      } else {
+        icon.textContent = '🌐';
+        alert('Idioma cambiado a Español');
+      }
+    }
+  </script>
 </body>
 </html>
