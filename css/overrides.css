@@ -1,0 +1,39 @@
+/* Aizen Mystic — Phase 1 Overrides (non-breaking)
+   Objetivo: añadir capa de seguridad sin cambiar la UI.
+   - Variables extendidas
+   - Modo diagnóstico opcional
+   - Respeta completamente el legacy
+*/
+
+/* 1) Capa: overrides al final del cascade */
+@layer overrides {
+  /* 1.1 Variables extendidas (no cambian visual por sí solas) */
+  :root {
+    --morado-dark: #7a2f8d;           /* hover morado en botones */
+    --whatsapp: #25D366;
+    --shadow-soft: 0 5px 15px rgba(0,0,0,0.05);
+    --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.08);
+    --overlay-hero: linear-gradient(to bottom, rgba(144, 58, 168, 0.2), rgba(0,0,0,0.5));
+  }
+
+  /* 1.2 Seguridad: respeta usuarios con reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* 1.3 Utilidad para desactivar animaciones en staging: <body class="no-anim"> */
+  .no-anim * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* 1.4 Utilidad de depuración (agrega outline visual): .debug-outline en contenedor */
+  .debug-outline * {
+    outline: 1px dashed rgba(144,58,168,0.35);
+    outline-offset: -1px;
+  }
+}

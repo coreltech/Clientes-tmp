@@ -2,8 +2,8 @@
 /* === AIZEN MYSTIC - ESTILO PRINCIPAL =============================== */
 /* Proyecto: Aizen Mystic                                              */
 /* Cliente: Auristela Izquierdo                                        */
-/* Fecha: 5 de abril de 2025                                           */
-/* Estado: Definitivo, limpio, funcional, mantenible                   */
+/* Fecha: 01 de septiembre de 2025                                     */
+/* Versión: Reorganizada, completa, sin pérdidas                       */
 /* =================================================================== */
 
 /* === 1. RESET BÁSICO ================================================ */
@@ -79,10 +79,6 @@ body {
   transform: scale(0.8);
   border-radius: 8px;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 30px rgba(144, 58, 168, 0.6);
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
   animation: fadeIn 1s ease-out 0.5s forwards,
              spin 4s linear 1.3s infinite;
 }
@@ -99,7 +95,7 @@ body {
 /* === 4. HEADER ===================================================== */
 .header {
   background-color: var(--beige);
-  background-image: url('../img/fondo-sakura-header.jpg');
+  background-image: url('../img/fondo-sakura-header.jpg2');
   background-repeat: no-repeat;
   background-position: left center;
   background-size: auto 80%;
@@ -144,7 +140,7 @@ body {
 }
 
 .logo-img {
-  height: 70px;
+  height: 60px;
   width: auto;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
   transition: transform 0.3s ease;
@@ -301,7 +297,7 @@ body {
 }
 
 .highlight {
-  color: var(--morado);
+  color: var(--white);
   font-weight: 700;
 }
 
@@ -338,488 +334,14 @@ body {
   z-index: -1;
 }
 
-/* === 6. BOTONES ==================================================== */
-.btn-primary {
-  background: var(--morado);
-  color: white;
-  padding: 12px 28px;
-  text-decoration: none;
-  border-radius: 30px;
-  display: inline-block;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.btn-primary:hover {
-  background: #7a2f8d;
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--beige);
-  border: 2px solid var(--beige);
-  padding: 12px 28px;
-  text-decoration: none;
-  border-radius: 30px;
-  display: inline-block;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.btn-secondary:hover {
-  background: var(--beige);
-  color: var(--negro);
-}
-
-.btn-small {
-  display: block;
-  margin: 0 auto 15px;
-  padding: 10px 20px;
-  background: var(--morado);
-  color: white;
-  text-decoration: none;
-  font-size: 0.95em;
-  border-radius: 25px;
-  transition: background 0.3s, transform 0.2s;
-  width: fit-content;
-  font-weight: 600;
-}
-
-.btn-small:hover {
-  background: #7a2f8d;
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--negro);
-  border: 2px solid var(--negro);
-  padding: 12px 28px;
-  text-decoration: none;
-  border-radius: 30px;
-  display: inline-block;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.btn-outline:hover {
-  background: var(--negro);
-  color: white;
-}
-
-.btn-text {
-  color: var(--morado);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* === 7. SECCIONES COMUNES ========================================== */
-.intro, .services-preview, .shop-preview, .testimonials, .newsletter {
-  padding: 80px 0;
-}
-
-.intro-box {
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.2em;
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--negro);
-}
-
-/* === 8. SERVICIOS (grid) =========================================== */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin: 40px 0;
-}
-
-.service-card {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-}
-
-.service-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.service-card:hover .service-img {
-  transform: scale(1.05);
-}
-
-/* === 9. TIENDA ==================================================== */
-.shop-preview {
-  padding: 80px 0;
-  background: var(--beige);
-}
-
-.shop-intro {
-  text-align: center;
-  max-width: 600px;
-  margin: 20px auto 40px;
-  color: var(--gris-oscuro);
-  font-size: 1.1em;
-}
-
-.shop-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin: 40px 0;
-}
-
-.product-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(144, 58, 168, 0.15);
-}
-
-.product-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.product-card:hover .product-img {
-  transform: scale(1.05);
-}
-
-.product-card h3 {
-  margin: 18px 15px 8px;
-  font-size: 1.3em;
-  color: var(--negro);
-  text-align: left;
-}
-
-.product-desc {
-  margin: 0 15px 10px;
-  color: var(--gris-oscuro);
-  font-size: 0.95em;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.price {
-  margin: 0 15px 15px;
-  font-size: 1.1em;
-  font-weight: 700;
-  color: var(--morado);
-  text-align: left;
-}
-
-/* === 10. TESTIMONIOS =============================================== */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-blockquote {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  font-style: italic;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-blockquote cite {
-  display: block;
-  margin-top: 15px;
-  font-weight: 600;
-  color: var(--gris-oscuro);
-}
-
-/* === 11. NEWSLETTER =============================================== */
-.newsletter {
-  background: var(--beige);
-  color: var(--negro);
-  text-align: center;
-  padding: 60px 0;
-}
-
-.newsletter h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: var(--negro);
-}
-
-.newsletter p {
-  max-width: 600px;
-  margin: 0 auto 25px;
-  color: var(--gris-oscuro);
-  font-size: 1.1em;
-}
-
-.newsletter-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.newsletter-form input {
-  padding: 12px 20px;
-  width: 300px;
-  border: none;
-  border-radius: 30px;
-  font-family: inherit;
-}
-
-.newsletter-form button {
-  border-radius: 30px;
-}
-
-.small {
-  margin-top: 15px;
-  opacity: 0.7;
-  font-size: 0.9em;
-}
-
-/* === 12. FOOTER =================================================== */
-.footer {
-  background: var(--negro);
-  color: var(--beige);
-  padding: 30px 0 15px;
-  font-size: 0.85em;
-  line-height: 1.5;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr 2fr;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.footer-logo-img {
-  height: 40px;
-  width: auto;
-  margin-bottom: 10px;
-  opacity: 0.95;
-}
-
-.footer-contact h5 {
-  margin: 8px 0;
-  font-weight: 400;
-}
-
-.footer-contact a {
-  color: var(--morado);
-  text-decoration: none;
-}
-
-.footer-social p {
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.social-links {
-  color: var(--gris-medio);
-}
-
-.social-links a {
-  color: var(--morado);
-  text-decoration: none;
-  font-size: 0.9em;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-legal {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.footer-legal a {
-  color: var(--morado);
-  text-decoration: none;
-}
-
-.footer-legal a:hover {
-  text-decoration: underline;
-}
-
-/* === 13. WHATSAPP FLOATING BUTTON ================================ */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background: #25D366;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8em;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-/* === 14. SERVICIOS DETALLADOS ===================================== */
-.hero-services {
-  position: relative;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  margin-top: 60px;
-}
-
-.hero-services {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.hero-services .hero-content {
-  z-index: 2;
-  max-width: 700px;
-  padding: 0 20px;
-  color: white;
-}
-
-.hero-services h1 {
-  font-size: 3em;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-.hero-services p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  color: var(--gris-medio);
-  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
-}
-
-.hero-services .btn-primary {
-  background: var(--morado);
-  color: white;
-}
-
-.service-card-full {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  margin-bottom: 50px;
-}
-
-.service-image {
-  flex: 1 1 300px;
-  height: 300px;
-}
-
-.service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.service-content {
-  flex: 1 1 400px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.service-content h3 {
-  margin-bottom: 15px;
-  color: var(--morado);
-  font-size: 1.5em;
-}
-
-.service-content p {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  color: var(--gris-oscuro);
-}
-
-/* === 15. CTA FINAL ================================================= */
-.cta-full {
-  background: var(--beige);
-  color: var(--negro);
-  text-align: center;
-  padding: 80px 0;
-}
-
-.cta-full h2 {
-  font-size: 2.2em;
-  margin-bottom: 15px;
-  color: var(--negro);
-}
-
-.cta-full p {
-  max-width: 600px;
-  margin: 0 auto 30px;
-  color: var(--gris-oscuro);
-  font-size: 1.1em;
-}
-
-.cta-full .btn-primary {
-  background: var(--morado);
-  color: white;
-  padding: 14px 32px;
-  font-size: 1.1em;
-}
-
-/* === 16. PÁGINAS: HERO ESPECÍFICOS ================================ */
+/* === 6. HERO ESPECÍFICOS ============================================ */
 .hero-blog {
   position: relative;
   height: 60vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  margin-top: 60px; /* ← Esto empuja el hero justo debajo del nav fijo */
+  margin-top: 60px;
 }
 
 .hero-blog .hero-content h1 {
@@ -921,253 +443,481 @@ blockquote cite {
   text-shadow: 0 1px 5px rgba(0,0,0,0.7);
 }
 
-/* === 17. SOBRE MÍ ================================================== */
-.about-main {
-  padding: 80px 0;
-  background: var(--beige);
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+.hero-services {
+  position: relative;
+  height: 60vh;
+  display: flex;
   align-items: center;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.4s ease;
-}
-
-.about-image img:hover {
-  transform: scale(1.02);
-}
-
-.about-content h2 {
-  font-size: 2.2em;
-  margin-bottom: 20px;
-  color: var(--negro);
-}
-
-.about-content p {
-  margin-bottom: 20px;
-  line-height: 1.7;
-  color: var(--gris-oscuro);
-}
-
-.about-values {
-  padding: 80px 0;
-  background: white;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.value-card {
-  background: var(--beige);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.value-card:hover {
-  transform: translateY(-10px);
-}
-
-.value-card h3 {
-  margin-bottom: 15px;
-  color: var(--morado);
-  font-size: 1.4em;
-}
-
-.value-card p {
-  color: var(--gris-oscuro);
-  line-height: 1.6;
-}
-
-/* === 18. PERGAMINO JAPONÉS ========================================= */
-.scroll-container {
-  padding: 80px 0;
-  background: var(--beige);
-  text-align: center;
-}
-
-.parchment {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px;
-  background: url('../img/parchment-texture.jpg') no-repeat center;
-  background-size: cover;
-  border: 1px solid var(--gris-medio);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  position: relative;
   overflow: hidden;
+  margin-top: 60px;
 }
 
-.parchment::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border: 1px dashed rgba(144, 58, 168, 0.15);
-  pointer-events: none;
-  border-radius: 10px;
+.hero-services {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-.parchment-content {
-  position: relative;
+.hero-services .hero-content {
   z-index: 2;
-  color: var(--negro);
-  line-height: 1.8;
-  text-align: left;
+  max-width: 700px;
+  padding: 0 20px;
+  color: white;
 }
 
+.hero-services h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
 
-.parchment-content h2 {
-  color: var(--morado);
-  font-size: 2em;
+.hero-services p {
+  font-size: 1.2em;
   margin-bottom: 20px;
-  text-align: center;
+  color: var(--gris-medio);
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
 
-.parchment-content blockquote {
+.hero-services .btn-primary {
   background: var(--morado);
   color: white;
-  font-style: italic;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 30px 0;
-  text-align: center;
-  font-size: 1.1em;
 }
 
-/* === 19. TIENDA - FILTROS Y PRODUCTOS ============================ */
-.shop-filters {
-  padding: 30px 0;
-  background: var(--beige);
-}
-
-.filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.filter-btn {
-  padding: 8px 20px;
-  background: white;
-  border: 1px solid var(--gris-medio);
+/* === 7. BOTONES ==================================================== */
+.btn-primary {
+  background: var(--morado);
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
   border-radius: 30px;
-  color: var(--gris-oscuro);
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #7a2f8d;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--beige);
+  border: 2px solid var(--beige);
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--beige);
+  color: var(--negro);
+}
+
+.btn-small {
+  display: block;
+  margin: 0 auto 15px;
+  padding: 10px 20px;
+  background: var(--morado);
+  color: white;
   text-decoration: none;
   font-size: 0.95em;
-  transition: all 0.3s ease;
-}
-
-.filter-btn:hover, .filter-btn.active {
-  background: var(--morado);
-  color: white;
-  border-color: var(--morado);
-}
-
-.shop-products {
-  padding: 80px 0;
-  background: var(--beige);
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 15px;
-}
-
-.product-img-wrapper {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.product-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--morado);
-  color: white;
-  font-size: 0.8em;
-  padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: 25px;
+  transition: background 0.3s, transform 0.2s;
+  width: fit-content;
   font-weight: 600;
 }
 
-/* === 20. BLOG ===================================================== */
-.blog-filters {
-  padding: 30px 0;
-  background: var(--beige);
+.btn-small:hover {
+  background: #7a2f8d;
+  transform: translateY(-2px);
 }
 
-.blog-posts {
+.btn-outline {
+  background: transparent;
+  color: var(--negro);
+  border: 2px solid var(--negro);
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: var(--negro);
+  color: white;
+}
+
+.btn-text {
+  color: var(--morado);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* === 8. SECCIONES COMUNES ========================================== */
+.intro, .services-preview, .shop-preview, .testimonials, .newsletter {
+  padding: 80px 0;
+}
+
+.intro-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--negro);
+}
+
+/* === 9. SERVICIOS (grid) =========================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.05);
+}
+
+/* === 10. TIENDA =================================================== */
+.shop-preview {
   padding: 80px 0;
   background: var(--beige);
 }
 
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 15px;
+.shop-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto 40px;
+  color: var(--gris-oscuro);
+  font-size: 1.1em;
 }
 
-.post-card {
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.product-card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.post-card:hover {
-  transform: translateY(-10px);
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(144, 58, 168, 0.15);
 }
 
-.post-img {
+.product-img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.post-content {
-  padding: 20px;
+.product-card:hover .product-img {
+  transform: scale(1.05);
 }
 
-.post-category {
-  display: inline-block;
-  background: var(--morado);
-  color: white;
-  font-size: 0.8em;
-  padding: 4px 12px;
-  border-radius: 20px;
+.product-card h3 {
+  margin: 18px 15px 8px;
+  font-size: 1.3em;
+  color: var(--negro);
+  text-align: left;
+}
+
+.product-desc {
+  margin: 0 15px 10px;
+  color: var(--gris-oscuro);
+  font-size: 0.95em;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.price {
+  margin: 0 15px 15px;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: var(--morado);
+  text-align: left;
+}
+
+/* === 11. TESTIMONIOS =============================================== */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+blockquote {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--gris-oscuro);
+}
+
+/* === 12. NEWSLETTER =============================================== */
+.newsletter {
+  background: var(--beige);
+  color: var(--negro);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.newsletter h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: var(--negro);
+}
+
+.newsletter p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: var(--gris-oscuro);
+  font-size: 1.1em;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 12px 20px;
+  width: 300px;
+  border: none;
+  border-radius: 30px;
+  font-family: inherit;
+}
+
+.newsletter-form button {
+  border-radius: 30px;
+}
+
+.small {
+  margin-top: 15px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+/* === 13. FOOTER =================================================== */
+.footer {
+  background: var(--gris-medio);
+  color: var(--beige);
+  padding: 30px 0 15px;
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-logo-img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+.footer-contact h5 {
+  margin: 8px 0;
+  font-weight: 400;
+}
+
+.footer-contact a {
+  color: var(--morado);
+  text-decoration: none;
+}
+
+.footer-social p {
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-/* === 21. ARTÍCULO DEL BLOG (post.html) ============================ */
+.social-links {
+  color: var(--gris-medio);
+}
+
+.social-links a {
+  color: var(--morado);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-legal {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-legal a {
+  color: var(--morado);
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+/* === 14. WHATSAPP FLOATING BUTTON ================================ */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* === 15. SERVICIOS DETALLADOS ===================================== */
+.service-card-full {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  margin-bottom: 50px;
+}
+
+.service-image {
+  flex: 1 1 300px;
+  height: 300px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-content {
+  flex: 1 1 400px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-content h3 {
+  margin-bottom: 15px;
+  color: var(--morado);
+  font-size: 1.5em;
+}
+
+.service-content p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: var(--gris-oscuro);
+}
+
+/* === 16. CTA FINAL ================================================= */
+.cta-full {
+  background: var(--beige);
+  color: var(--negro);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.cta-full h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: var(--negro);
+}
+
+.cta-full p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: var(--gris-oscuro);
+  font-size: 1.1em;
+}
+
+.cta-full .btn-primary {
+  background: var(--morado);
+  color: white;
+  padding: 14px 32px;
+  font-size: 1.1em;
+}
+
+/* === 17. PÁGINAS: HERO ESPECÍFICOS ================================ */
 .hero-post {
   position: relative;
   height: 60vh;
@@ -1207,381 +957,7 @@ blockquote cite {
   text-shadow: 0 1px 5px rgba(0,0,0,0.7);
 }
 
-.post-content-container {
-  padding: 80px 0;
-  background: var(--beige);
-}
-
-.post-content {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
-  color: var(--gris-oscuro);
-  font-size: 1.1em;
-}
-
-.post-content h2 {
-  font-size: 1.8em;
-  margin: 40px 0 20px;
-  color: var(--negro);
-}
-
-.post-content p {
-  margin-bottom: 20px;
-}
-
-.post-content blockquote {
-  background: var(--morado);
-  color: white;
-  font-style: italic;
-  padding: 25px;
-  border-radius: 10px;
-  margin: 30px 0;
-  font-size: 1.2em;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.post-share {
-  margin-top: 50px;
-  text-align: center;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.post-share p {
-  margin-bottom: 15px;
-  color: var(--negro);
-}
-
-.related-posts {
-  padding: 80px 0;
-  background: white;
-}
-
-/* === 22. CONTACTO ================================================= */
-.contact-main {
-  padding: 80px 0;
-  background: var(--beige);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: start;
-}
-
-.contact-form h2 {
-  font-size: 2.2em;
-  margin-bottom: 30px;
-  color: var(--negro);
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 20px;
-  border: 1px solid var(--gris-medio);
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 1em;
-}
-
-.contact-form textarea {
-  resize: vertical;
-}
-
-.contact-info h3 {
-  font-size: 1.6em;
-  margin-bottom: 20px;
-  color: var(--negro);
-}
-
-.contact-method {
-  margin-bottom: 30px;
-}
-
-.contact-method h4 {
-  margin-bottom: 8px;
-  color: var(--morado);
-}
-
-.contact-method a {
-  color: var(--morado);
-  text-decoration: none;
-}
-
-.contact-method a:hover {
-  text-decoration: underline;
-}
-
-.testimonial-highlight {
-  padding: 80px 0;
-  background: white;
-  text-align: center;
-}
-
-.testimonial-highlight blockquote {
-  max-width: 800px;
-  margin: 0 auto;
-  font-style: italic;
-  font-size: 1.4em;
-  color: var(--gris-oscuro);
-  line-height: 1.6;
-  background: var(--beige);
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.testimonial-highlight cite {
-  display: block;
-  margin-top: 20px;
-  font-weight: 600;
-  color: var(--negro);
-}
-
-/* === 23. ANIMACIONES DE SERVICIOS ================================ */
-.anim-element {
-  position: fixed;
-  top: 25%;
-  left: -150px;
-  transform: translateY(-50%) rotate(0deg);
-  z-index: 99999;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.anim-img {
-  width: 80px;
-  height: auto;
-  border-radius: 8px;
-  filter: drop-shadow(0 0 15px rgba(144, 58, 168, 0.8));
-}
-
-@keyframes slideToCenter {
-  0% {
-    left: -150px;
-    transform: translateY(-50%) rotate(0deg);
-    opacity: 0;
-  }
-  10% { opacity: 1; }
-  100% {
-    left: 54%;
-    margin-left: -60px;
-    transform: translateX(-50%) translateY(-50%) rotate(360deg);
-    opacity: 1;
-  }
-}
-
-@keyframes slideToRight {
-  0% {
-    left: 54%;
-    margin-left: -60px;
-    transform: translateX(-50%) translateY(-50%) rotate(360deg);
-    opacity: 1;
-  }
-  100% {
-    left: calc(100% - 130px);
-    transform: translateX(-100%) translateY(-50%) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-.anim-element.slide-center {
-  animation: slideToCenter 1.8s ease-out forwards;
-}
-
-.anim-element.slide-right {
-  animation: slideToRight 1.5s ease-out forwards;
-}
-
-.hero-logo-center {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  opacity: 0;
-  z-index: 3;
-  pointer-events: none;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.hero-logo-center.show {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.logoux-img {
-  width: 80px;
-  height: auto;
-  border-radius: 8px;
-  opacity: 1 !important;
-  filter: brightness(1) contrast(1.1);
-  box-shadow: 0 0 25px rgba(208, 198, 211, 0.6);
-}
-
-/* === 24. RESPONSIVE (móviles) ====================================== */
-@media (max-width: 768px) {
-  .nav { display: none; }
-  .mobile-toggle { display: block; }
-  .hero { justify-content: center; }
-  .hero-symbol { display: none; }
-  .hero-content {
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 20px;
-    max-width: 100%;
-    margin-right: 0;
-  }
-  .hero-content h1 { font-size: 2.5em; }
-  .newsletter-form { flex-direction: column; align-items: center; }
-  .newsletter-form input { width: 100%; }
-  .logo-img { height: 56px; }
-  .nav-actions {
-    margin-left: 0;
-    margin-top: 15px;
-    gap: 20px;
-  }
-  .footer-content { grid-template-columns: 1fr; text-align: center; }
-  .footer-contact, .footer-social { display: flex; flex-direction: column; align-items: center; }
-  .social-links { gap: 10px; }
-  .social-links a::before { content: "•"; margin: 0 5px; }
-  .social-links a:first-child::before { content: ""; }
-  .service-card-full { flex-direction: column; }
-  .hero-services h1 { font-size: 2.2em; }
-}
-
-/* === EFECTO DE ESCRITURA MANUAL === */
-[data-typewriter] {
-  position: relative;
-  font-family: var(--font-sybilla);
-  font-size: 1.1em;
-  line-height: 1.8;
-  color: #1A1A1A;
-  opacity: 0;
-  white-space: pre-line;
-  overflow: hidden;
-  border-right: 2px solid #903AA8;
-  padding-right: 10px;
-  animation: type 4s steps(80) 0.5s forwards,
-             fadeIn 0.5s ease-in 4.5s forwards;
-}
-
-@keyframes type {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-/* === SAKURA FLotando SUTIL === */
-.sakura-fall {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.2;
-}
-
-.petal {
-  position: absolute;
-  font-size: 1.5em;
-  opacity: 0;
-  animation: fall-sakura 25s linear infinite;
-}
-
-@keyframes fall-sakura {
-  0% {
-    transform: translateY(-10px) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.7;
-  }
-  90% {
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-/* === GOTEO DE TINTA === */
-.ink-drip {
-  height: 40px;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40"><path d="M50,0 C60,15 40,25 50,40" fill="none" stroke="rgba(144,58,168,0.3)" stroke-width="2" stroke-linecap="round"/></svg>') center no-repeat;
-  background-size: 60px;
-  margin: 60px auto;
-  opacity: 0.6;
-  position: relative;
-}
-
-.ink-drip::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 0;
-  background: rgba(144,58,168,0.4);
-  animation: drip 2s infinite 1s;
-}
-
-@keyframes drip {
-  0%, 100% { height: 0; opacity: 0; }
-  50% { height: 15px; opacity: 1; }
-}
-
-/* === BLOCKQUOTE CON TINTA === */
-.parchment-content blockquote {
-  background: #903AA8;
-  color: white;
-  font-style: italic;
-  padding: 25px 30px;
-  border-radius: 10px;
-  margin: 40px 0;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border-left: 5px solid #D4A52A;
-}
-
-.parchment-content blockquote::before {
-  content: '“';
-  font-size: 3em;
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  opacity: 0.2;
-  font-family: serif;
-  color: white;
-  line-height: 1;
-}
-
-/* === LOGO SE MUEVE AL HACER SCROLL === */
-.header .logo-img {
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-body.scrolled .header .logo-img {
-  transform: scale(0.9) rotate(2deg);
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-}
-
-/* === PILARES - ESTILO MANUSCRITO INTEGRADO === */
+/* === 18. SOBRE MÍ ================================================== */
 .pilares-pergamino {
   padding: 60px 0;
   background: url('../img/parchment-texture.jpg') no-repeat center;
@@ -1590,7 +966,6 @@ body.scrolled .header .logo-img {
   position: relative;
 }
 
-/* Filtro tenue para mejorar legibilidad */
 .pilares-pergamino::before {
   content: '';
   position: absolute;
@@ -1678,12 +1053,766 @@ body.scrolled .header .logo-img {
   margin: 0;
 }
 
-/* Ajuste en móviles */
+/* === 19. PERGAMINO JAPONÉS ========================================= */
+.scroll-container {
+  padding: 80px 0;
+  background: var(--beige);
+  text-align: center;
+}
+
+.parchment {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px;
+  background: url('../img/parchment-texture.jpg') no-repeat center;
+  background-size: cover;
+  border: 1px solid var(--gris-medio);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.parchment::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px dashed rgba(144, 58, 168, 0.15);
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.parchment-content {
+  position: relative;
+  z-index: 2;
+  color: var(--negro);
+  line-height: 1.8;
+  text-align: left;
+}
+
+.parchment-content h2 {
+  color: var(--morado);
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.parchment-content blockquote {
+  background: var(--morado);
+  color: white;
+  font-style: italic;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* === 20. TIENDA - FILTROS Y PRODUCTOS ============================ */
+.shop-filters {
+  padding: 30px 0;
+  background: var(--beige);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  background: white;
+  border: 1px solid var(--gris-medio);
+  border-radius: 30px;
+  color: var(--gris-oscuro);
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--morado);
+  color: white;
+  border-color: var(--morado);
+}
+
+.shop-products {
+  padding: 80px 0;
+  background: var(--beige);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.product-img-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--morado);
+  color: white;
+  font-size: 0.8em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* === 21. BLOG ===================================================== */
+.blog-filters {
+  padding: 30px 0;
+  background: var(--beige);
+}
+
+.blog-posts {
+  padding: 80px 0;
+  background: var(--beige);
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.post-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-10px);
+}
+
+.post-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-category {
+  display: inline-block;
+  background: var(--morado);
+  color: white;
+  font-size: 0.8em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* === 22. ARTÍCULO DEL BLOG (post.html) ============================ */
+.post-content-container {
+  padding: 80px 0;
+  background: var(--beige);
+}
+
+.post-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: var(--gris-oscuro);
+  font-size: 1.1em;
+}
+
+.post-content h2 {
+  font-size: 1.8em;
+  margin: 40px 0 20px;
+  color: var(--negro);
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-content blockquote {
+  background: var(--morado);
+  color: white;
+  font-style: italic;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 30px 0;
+  font-size: 1.2em;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.post-share {
+  margin-top: 50px;
+  text-align: center;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.post-share p {
+  margin-bottom: 15px;
+  color: var(--negro);
+}
+
+.related-posts {
+  padding: 80px 0;
+  background: white;
+}
+
+/* === 23. CONTACTO ================================================= */
+.contact-main {
+  padding: 80px 0;
+  background: var(--beige);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.contact-form h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: var(--negro);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid var(--gris-medio);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-info h3 {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  color: var(--negro);
+}
+
+.contact-method {
+  margin-bottom: 30px;
+}
+
+.contact-method h4 {
+  margin-bottom: 8px;
+  color: var(--morado);
+}
+
+.contact-method a {
+  color: var(--morado);
+  text-decoration: none;
+}
+
+.contact-method a:hover {
+  text-decoration: underline;
+}
+
+.testimonial-highlight {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.testimonial-highlight blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  font-style: italic;
+  font-size: 1.4em;
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+  background: var(--beige);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.testimonial-highlight cite {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--negro);
+}
+
+/* === 24. ANIMACIONES DE SERVICIOS ================================ */
+.anim-element {
+  position: fixed;
+  top: 25%;
+  left: -150px;
+  transform: translateY(-50%) rotate(0deg);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.anim-img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 15px rgba(144, 58, 168, 0.8));
+}
+
+@keyframes slideToCenter {
+  0% {
+    left: -150px;
+    transform: translateY(-50%) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  100% {
+    left: 54%;
+    margin-left: -60px;
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    left: 54%;
+    margin-left: -60px;
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 130px);
+    transform: translateX(-100%) translateY(-50%) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.anim-element.slide-center {
+  animation: slideToCenter 1.8s ease-out forwards;
+}
+
+.anim-element.slide-right {
+  animation: slideToRight 1.5s ease-out forwards;
+}
+
+.hero-logo-center {
+  position: absolute;
+  top: 15%;
+  left: 49%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-logo-center.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.logoux-img {
+  width: 40px;
+  height: auto;
+  border-radius: 8px;
+  opacity: 1 !important;
+  filter: brightness(1) contrast(1.1);
+}
+
+/* === 25. EFECTO DE ESCRITURA MANUAL === */
+@keyframes type {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* === 26. SAKURA FLotando SUTIL === */
+.sakura-fall {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.petal {
+  position: absolute;
+  font-size: 1.5em;
+  opacity: 0;
+  animation: fall-sakura 25s linear infinite;
+}
+
+@keyframes fall-sakura {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* === 27. GOTEO DE TINTA === */
+.ink-drip {
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 40\"><path d=\"M50,0 C60,15 40,25 50,40\" fill=\"none\" stroke=\"rgba(144,58,168,0.3)\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>') center no-repeat;
+  background-size: 60px;
+  margin: 60px auto;
+  opacity: 0.6;
+  position: relative;
+}
+
+.ink-drip::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 0;
+  background: rgba(144,58,168,0.4);
+  animation: drip 2s infinite 1s;
+}
+
+@keyframes drip {
+  0%, 100% { height: 0; opacity: 0; }
+  50% { height: 15px; opacity: 1; }
+}
+
+/* === 28. BLOCKQUOTE CON TINTA === */
+.parchment-content blockquote {
+  background: #903AA8;
+  color: white;
+  font-style: italic;
+  padding: 25px 30px;
+  border-radius: 10px;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-left: 5px solid #D4A52A;
+}
+
+.parchment-content blockquote::before {
+  content: '“';
+  font-size: 3em;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  opacity: 0.2;
+  font-family: serif;
+  color: white;
+  line-height: 1;
+}
+
+/* === 29. LOGO SE MUEVE AL HACER SCROLL === */
+.header .logo-img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* === 30. RESPONSIVE (móviles) ====================================== */
 @media (max-width: 768px) {
+  .nav { display: none; }
+  .mobile-toggle { display: block; }
+  .hero { justify-content: center; }
+  .hero-symbol { display: none; }
+  .hero-content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .hero-content h1 { font-size: 2.5em; }
+  .newsletter-form { flex-direction: column; align-items: center; }
+  .newsletter-form input { width: 100%; }
+  .logo-img { height: 56px; }
+  .nav-actions {
+    margin-left: 0;
+    margin-top: 15px;
+    gap: 20px;
+  }
+  .footer-content { grid-template-columns: 1fr; text-align: center; }
+  .footer-contact, .footer-social { display: flex; flex-direction: column; align-items: center; }
+  .social-links { gap: 10px; }
+  .social-links a::before { content: "•"; margin: 0 5px; }
+  .social-links a:first-child::before { content: ""; }
+  .service-card-full { flex-direction: column; }
+  .hero-services h1 { font-size: 2.2em; }
   .pilar-manuscrito {
     padding: 20px 30px;
   }
   .pilares-pergamino .section-title {
     font-size: 1.8em;
   }
+}
+
+/* === HERO CURSOS === */
+.hero-cursos {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-cursos .hero-content {
+  max-width: 600px;
+  padding: 0 40px;
+  z-index: 2;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+.hero-cursos .hero-title {
+  font-family: 'Adobe Devanagari', serif;
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.hero-cursos .hero-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: var(--gris-medio);
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+
+.hero-cursos .btn-primary {
+  background: var(--morado);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-cursos .btn-primary:hover {
+  background: #7a2f8d;
+}
+
+.hero-cursos .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero-cursos .hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(144, 58, 168, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: -1;
+}
+
+/* === HERO CENTRADO === */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(144, 58, 168, 0.2),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: -1;
+}
+
+.hero-content-center {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  line-height: 1.2;
+}
+
+.hero-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.hero-subtitle {
+  color: var(--gris-medio);
+  font-size: 1.2em;
+  margin: 0;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+
+.cta-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5em;
+  }
+  .cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+/* === CAMINOS ESPIRITUALES - CUADRÍCULA 2x2 === */
+.spiritual-paths .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.spiritual-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .spiritual-paths-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .spiritual-paths-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.path-card {
+  text-decoration: none;
+  display: block;
+}
+
+.path-card div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.path-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.path-card h3 {
+  color: var(--morado);
+  margin-bottom: 10px;
+  font-family: 'Adobe Devanagari', serif;
+}
+
+.path-card p {
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.path-card .btn-small {
+  margin: 0 auto 15px;
+  display: block;
+  width: fit-content;
 }
