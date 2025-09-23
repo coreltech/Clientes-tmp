@@ -61,7 +61,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/servicios.css" />
 
   <!-- Favicon -->
   <link rel="icon" href="img/favicon.png" type="image/png">
@@ -73,7 +73,6 @@
     <img src="img/animacion.png" alt="Elemento animado giratorio" class="anim-img">
   </div>
 
-  
   <!-- Header -->
   <header class="header" data-aos="fade-down">
     <div class="container">
@@ -83,10 +82,11 @@
       </a>
       <nav class="nav">
         <a href="index.html">Inicio</a>
-        <a href="servicios.html" class="active">Servicios</a>
+        <a href="servicios.html">Servicios</a>
         <a href="tienda.html">Tienda</a>
         <a href="blog.html">Blog</a>
         <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="cursos.html" class="active">Cursos</a>
         <a href="contacto.html">Contacto</a>
         <div class="nav-actions">
           <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
@@ -98,23 +98,38 @@
           </a>
         </div>
       </nav>
-      <div class="mobile-toggle">☰</div>
+      <div class="mobile-toggle" aria-expanded="false" role="button" aria-label="Menú móvil">☰</div>
     </div>
   </header>
-
+  
   <!-- Hero de Servicios -->
-  <section class="hero-services">
-    <div class="hero-content">
-      <!-- Imagen logoux que aparece al final de la animación -->
-<div class="hero-logo-center" id="heroLogoCenter">
-  <img src="img/logoux.png" alt="Logoux Aizen Mystic" class="logoux-img">
-</div>
-      <h1>Tu <span class="highlight">Camino Interior</span></h1>
-      <p>Explora servicios espirituales diseñados para transformar tu energía, sanar tu pasado y alinearte con tu propósito.</p>
-      <a href="contacto.html" class="btn-primary">Agenda tu sesión</a>
-    </div>
-    <div class="hero-bg" style="background-image: url('img/hero-servicios.jpg');"></div>
-  </section>
+<section class="hero-services">
+  <div class="hero-bg" style="background-image: url('img/hero-servicios.jpg');"></div>
+
+  <!-- Logo central (opcional, si quieres moverlo también) -->
+  <div class="hero-logo-center-coords"
+       style="left: 49%; top: 18%; transform: translateX(-50%);">
+    <img src="img/logoux.png" alt="Logoux Aizen Mystic" class="logoux-img">
+  </div>
+
+  <!-- Título posicionable -->
+  <h1 class="hero-title-coords"
+      style="left:50%; top: 60%; transform: translateX(-50%);">
+    Tu <span class="highlight">Camino Interior</span>
+  </h1>
+
+  <!-- Subtítulo posicionable -->
+  <p class="hero-subtitle-coords"
+     style="left: 35%; top: 82%; transform: translateX(-50%);">
+    Explora servicios espirituales diseñados para transformar tu energía, sanar tu pasado y alinearte con tu propósito.
+  </p>
+
+  <!-- Botón posicionable -->
+  <div class="hero-btn-coords"
+       style="left: 80%; top: 80%; transform: translateX(-50%);">
+    <a href="contacto.html" class="btn-primary">Agenda tu sesión</a>
+  </div>
+</section>
 
   <!-- Sección de Servicios -->
   <section class="services-grid-container">
@@ -124,7 +139,7 @@
       <!-- Servicio 1 -->
       <div class="service-card-full" data-aos="fade-up" data-aos-delay="200">
         <div class="service-image">
-          <img src="img/servicio-reprogramacion.jpg" alt="Reprogramación de Sistema de Valores">
+          <img src="img/servicio-reprogramacion.jpg" alt="Reprogramación de Sistema de Valores" loading="lazy">
         </div>
         <div class="service-content">
           <h3>🌟 Reprogramación de Sistema de Valores</h3>
@@ -138,7 +153,7 @@
       <!-- Servicio 2 -->
       <div class="service-card-full" data-aos="fade-up" data-aos-delay="300">
         <div class="service-image">
-          <img src="img/servicio-tarot-evolutivo.jpg" alt="Tarot Evolutivo">
+          <img src="img/servicio-tarot-evolutivo.jpg" alt="Tarot Evolutivo" loading="lazy">
         </div>
         <div class="service-content">
           <h3>🔮 Tarot Evolutivo</h3>
@@ -152,7 +167,7 @@
       <!-- Servicio 3 -->
       <div class="service-card-full" data-aos="fade-up" data-aos-delay="400">
         <div class="service-image">
-          <img src="img/servicio-tarot-egipcio.jpg" alt="Tarot Egipcio">
+          <img src="img/servicio-tarot-egipcio.jpg" alt="Tarot Egipcio" loading="lazy">
         </div>
         <div class="service-content">
           <h3>🏺 Tarot Egipcio</h3>
@@ -166,7 +181,7 @@
       <!-- Servicio 4 -->
       <div class="service-card-full" data-aos="fade-up" data-aos-delay="500">
         <div class="service-image">
-          <img src="img/servicio-arquetipos.jpg" alt="Arquetipos de Conciencia">
+          <img src="img/servicio-arquetipos.jpg" alt="Arquetipos de Conciencia" loading="lazy">
         </div>
         <div class="service-content">
           <h3>🧠 Arquetipos de Conciencia – El Viaje Interior</h3>
@@ -180,7 +195,7 @@
       <!-- Servicio 5 -->
       <div class="service-card-full" data-aos="fade-up" data-aos-delay="600">
         <div class="service-image">
-          <img src="img/servicio-coaching.jpg" alt="Coaching Máster en Relaciones">
+          <img src="img/servicio-coaching.jpg" alt="Coaching Máster en Relaciones" loading="lazy">
         </div>
         <div class="service-content">
           <h3>🤝 Coaching Máster en Relaciones Personales</h3>
@@ -194,7 +209,7 @@
       <!-- Servicio 6 -->
       <div class="service-card-full" data-aos="fade-up" data-aos-delay="700">
         <div class="service-image">
-          <img src="img/servicio-astrologia.jpg" alt="Astrología China - Bazi">
+          <img src="img/servicio-astrologia.jpg" alt="Astrología China - Bazi" loading="lazy">
         </div>
         <div class="service-content">
           <h3>🐉 Astrología China – Los 4 Pilares del Destino (Bazi)</h3>
@@ -225,7 +240,7 @@
           <p>Transforma tu energía. Evoluciona tu alma.</p>
         </div>
         <div class="footer-contact">
-          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>✉️ aizenmysticweb@gmail.com</h5>
           <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
         </div>
         <div class="footer-social">
@@ -253,10 +268,13 @@
     // Inicializar AOS
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-    // Menú móvil
+    // Menú móvil con accesibilidad
     document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
       const nav = document.querySelector('.nav');
-      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+      const toggle = document.querySelector('.mobile-toggle');
+      const isOpen = nav.style.display === 'block';
+      nav.style.display = isOpen ? 'none' : 'block';
+      toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
     });
 
     // Cambiar idioma
@@ -267,48 +285,52 @@
     }
 
     // Animación de entrada con animacion.png
-  document.addEventListener('DOMContentLoaded', function () {
-    const animElement = document.getElementById('animElement');
-    const hero = document.querySelector('.hero-services');
-    const heroLogoCenter = document.getElementById('heroLogoCenter');
+    document.addEventListener('DOMContentLoaded', function () {
+      const animElement = document.getElementById('animElement');
+      const hero = document.querySelector('.hero-services');
+      const heroLogoCenter = document.getElementById('heroLogoCenter');
 
-    // Fase 1: Iniciar animación de entrada (izquierda → centro+)
-    setTimeout(() => {
-      animElement.style.opacity = '1';
-      animElement.classList.add('slide-center');
-    }, 300);
+      // Estado inicial del hero
+      hero.style.opacity = '0';
+      hero.style.transform = 'translateY(20px)';
 
-    // Fase 2: Esperar a que termine la animación de entrada
-    animElement.addEventListener('animationend', function handler(e) {
-      // Solo actuar cuando termina slide-center, no slide-right
-      if (animElement.classList.contains('slide-center')) {
-        animElement.removeEventListener('animationend', handler);
+      // Fase 1: Entrada del animElement
+      setTimeout(() => {
+        animElement.style.opacity = '1';
+        animElement.classList.add('slide-center');
+      }, 300);
 
-        // ✅ Ahora estamos en pausa visual
-        // Mostrar logoux.png con un leve retraso para que no sea abrupto
-        setTimeout(() => {
-          heroLogoCenter.classList.add('show');
-        }, 1000); // Aparece 100ms después de llegar
+      // Fase 2: Al terminar slide-center
+      animElement.addEventListener('animationend', function handler(e) {
+        if (animElement.classList.contains('slide-center')) {
+          animElement.removeEventListener('animationend', handler);
 
-        // Mostrar el hero al mismo tiempo
-        setTimeout(() => {
-          hero.style.opacity = '1';
-          hero.style.transform = 'translateY(0)';
-        }, 200);
+          // Mostrar logo central
+          setTimeout(() => {
+            heroLogoCenter.classList.add('show');
+          }, 100);
 
-        // Fase 3: Después de 500ms de pausa, iniciar salida
-        setTimeout(() => {
-          animElement.classList.remove('slide-center');
-          animElement.classList.add('slide-right');
+          // Mostrar hero
+          setTimeout(() => {
+            hero.style.opacity = '1';
+            hero.style.transform = 'translateY(0)';
+          }, 200);
 
-          // Escuchar el final de la salida
-          animElement.addEventListener('animationend', () => {
-            animElement.style.display = 'none';
-          }, { once: true });
-        }, 500); // Duración de la pausa
-      }
+          // Fase 3: Salida del animElement
+          setTimeout(() => {
+            animElement.classList.remove('slide-center');
+            animElement.classList.add('slide-right');
+          }, 500);
+        }
+      });
+
+      // Ocultar animElement al final
+      animElement.addEventListener('animationend', () => {
+        if (animElement.classList.contains('slide-right')) {
+          animElement.style.display = 'none';
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>

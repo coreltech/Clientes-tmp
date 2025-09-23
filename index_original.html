@@ -41,27 +41,13 @@
       font-style: italic;
       font-display: swap;
     }
-
-    :root {
-      --font-devanagari: 'Adobe Devanagari', serif;
-      --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
-    }
-
-    body {
-      font-family: var(--font-sybilla);
-      color: #1A1A1A;
-    }
-
-    h1, h2, h3, .highlight {
-      font-family: var(--font-devanagari);
-    }
   </style>
 
   <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <!-- Favicon -->
   <link rel="icon" href="img/favicon.png" type="image/png">
@@ -86,9 +72,16 @@
         <a href="tienda.html">Tienda</a>
         <a href="blog.html">Blog</a>
         <a href="sobre-mi.html">Sobre Mí</a>
-        <a href="cursos.html">Cursos</a>
         <a href="contacto.html">Contacto</a>
         <div class="nav-actions">
+          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
+            <svg class="nav-cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="nav-cart-count">0</span>
+          </a>
           <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
             <span class="lang-icon">🌐</span>
           </a>
@@ -99,93 +92,19 @@
   </header>
 
   <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-bg" style="background-image: url('img/hero-bg.jpg');"></div>
-
-  <!-- Título (coordenada X, Y) -->
-  <h1 class="hero-title-coords"
-      style="left: 70%; top: 5%; transform: translateX(-50%);">
-    Transforma tu <span class="highlight">energía interior</span>
-  </h1>
-
-  <!-- Subtítulo -->
-  <p class="hero-subtitle-coords"
-     style="left: 26%; top: 81%; transform: translateX(-50%);">
-    Guía espiritual para almas en búsqueda de sanación y evolución con propósito.
-  </p>
-
-  <!-- Botones -->
-  <div class="cta-group-coords"
-       style="left: 80%; top: 80%; transform: translateX(-50%);">
-    <a href="servicios.html" class="btn-primary">Descubre tus servicios</a>
-    <a href="cursos.html" class="btn-secondary">Únete a un curso grupal</a>
-  </div>
-</section>
-
-  <!-- Caminos Espirituales (2x2 con imágenes) -->
-  <section class="spiritual-paths" style="padding: 80px 0; background: var(--beige);">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">¿Por dónde quieres comenzar?</h2>
-      <p style="text-align: center; max-width: 700px; margin: 20px auto 50px; color: var(--gris-oscuro); font-size: 1.1em;">
-        Cada camino te acerca a tu esencia. Elige el que resuene con tu alma hoy.
-      </p>
-
-      <div class="spiritual-paths-grid" data-aos="fade-up" data-aos-delay="300">
-
-        <a href="servicios.html" class="path-card">
-          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
-            <img src="img/servicio-sanacion.jpg" alt="Sanación Individual" style="width: 100%; height: 180px; object-fit: cover;">
-            <div style="padding: 25px; text-align: center;">
-              <h3 style="color: var(--morado); margin-bottom: 10px;">Sanación Individual</h3>
-              <p style="color: var(--gris-oscuro); line-height: 1.6; margin-bottom: 20px;">
-                Sesiones personalizadas de lectura akáshica, sanación energética y mentoría.
-              </p>
-              <span class="btn-small" style="margin: 0 auto;">Explorar servicios</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="cursos.html" class="path-card">
-          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
-            <img src="img/curso-sanacion-grupal.jpg" alt="Cursos Grupales" style="width: 100%; height: 180px; object-fit: cover;">
-            <div style="padding: 25px; text-align: center;">
-              <h3 style="color: var(--morado); margin-bottom: 10px;">Cursos Grupales</h3>
-              <p style="color: var(--gris-oscuro); line-height: 1.6; margin-bottom: 20px;">
-                Espacios colectivos de meditación, arquetipos y sanación en comunidad.
-              </p>
-              <span class="btn-small" style="margin: 0 auto;">Ver próximos eventos</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="tienda.html" class="path-card">
-          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
-            <img src="img/producto-amatista.jpg" alt="Tienda Mística" style="width: 100%; height: 180px; object-fit: cover;">
-            <div style="padding: 25px; text-align: center;">
-              <h3 style="color: var(--morado); margin-bottom: 10px;">Tienda Mística</h3>
-              <p style="color: var(--gris-oscuro); line-height: 1.6; margin-bottom: 20px;">
-                Cristales, amuletos y objetos energéticos para tu altar y tu hogar.
-              </p>
-              <span class="btn-small" style="margin: 0 auto;">Ver artículos</span>
-            </div>
-          </div>
-        </a>
-
-        <a href="blog.html" class="path-card">
-          <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
-            <img src="img/blog-hero.jpg" alt="Sabiduría Espiritual" style="width: 100%; height: 180px; object-fit: cover;">
-            <div style="padding: 25px; text-align: center;">
-              <h3 style="color: var(--morado); margin-bottom: 10px;">Sabiduría</h3>
-              <p style="color: var(--gris-oscuro); line-height: 1.6; margin-bottom: 20px;">
-                Artículos, reflexiones y guías espirituales para tu evolución diaria.
-              </p>
-              <span class="btn-small" style="margin: 0 auto;">Leer el blog</span>
-            </div>
-          </div>
-        </a>
-
+  <section class="hero">
+    <div class="hero-symbol" data-aos="fade-left">
+      <span>🌸</span>
+    </div>
+    <div class="hero-content" data-aos="fade-right">
+      <h1>Transforma tu <span class="highlight">energía interior</span></h1>
+      <p>Guía espiritual para almas en búsqueda de sanación, evolución y propósito.</p>
+      <div class="cta-group">
+        <a href="servicios.html" class="btn-primary">Descubre tus servicios</a>
+        <a href="contacto.html" class="btn-secondary">Agenda tu sesión</a>
       </div>
     </div>
+    <div class="hero-bg" style="background-image: url('img/hero-bg.jpg');"></div>
   </section>
 
   <!-- Breve Introducción -->
@@ -229,6 +148,40 @@
     </div>
   </section>
 
+  <!-- Tienda Destacada -->
+  <section class="shop-preview">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Artículos Místicos</h2>
+      <p class="shop-intro">Objetos energéticos seleccionados con intención para tu altar personal.</p>
+      <div class="shop-grid" data-aos="fade-up" data-aos-delay="300">
+        <div class="product-card">
+          <img src="img/producto-amatista.jpg" alt="Amatista Sagrada" class="product-img" loading="lazy">
+          <h3>Amatista Sagrada</h3>
+          <p class="product-desc">Cristal de alta vibración para protección y conexión espiritual.</p>
+          <p class="price">Desde $25</p>
+          <button class="btn-small" type="button">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="img/producto-incienso.jpg" alt="Incienso Shoyeido" class="product-img" loading="lazy">
+          <h3>Incienso Shoyeido</h3>
+          <p class="product-desc">Armoniza tu espacio con fragancia japonesa de sándalo y jazmín.</p>
+          <p class="price">Desde $18</p>
+          <button class="btn-small" type="button">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+          <img src="img/producto-amuleto.jpg" alt="Amuleto de Protección" class="product-img" loading="lazy">
+          <h3>Amuleto de Protección</h3>
+          <p class="product-desc">Talismán energético grabado con símbolos ancestrales.</p>
+          <p class="price">Desde $30</p>
+          <button class="btn-small" type="button">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+        <a href="tienda.html" class="btn-outline">Ver toda la tienda</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonios -->
   <section class="testimonials">
     <div class="container">
@@ -268,11 +221,11 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="img/logo.png" alt="Aizen Mystic" class="footer-logo-img">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
           <p>Transforma tu energía. Evoluciona tu alma.</p>
         </div>
         <div class="footer-contact">
-          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>✉️ aizenmysticweb@gmail.com</h5>
           <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
         </div>
         <div class="footer-social">
@@ -297,18 +250,10 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Preloader: ocultar cuando termine
-    window.addEventListener('load', () => {
-      const preloader = document.getElementById('preloader');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 3500);
-    });
-
     // Inicializar AOS
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-    // Menú móvil
+    // Menú móvil con accesibilidad
     document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
       const nav = document.querySelector('.nav');
       const toggle = document.querySelector('.mobile-toggle');
@@ -317,11 +262,15 @@
       toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
     });
 
-    // Cambiar idioma
+    // Cambio de idioma (sin alert)
     function toggleLang(e) {
       e.preventDefault();
       const icon = document.querySelector('.lang-icon');
-      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+      if (icon.textContent === '🌐') {
+        icon.textContent = '🌎';
+      } else {
+        icon.textContent = '🌐';
+      }
     }
   </script>
 </body>

@@ -61,14 +61,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sobre-mi.css" />
 
   <!-- Favicon -->
   <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 <body>
 
-  <!-- Header -->
+    <!-- Header -->
   <header class="header" data-aos="fade-down">
     <div class="container">
       <a href="index.html" class="logo">
@@ -80,7 +80,8 @@
         <a href="servicios.html">Servicios</a>
         <a href="tienda.html">Tienda</a>
         <a href="blog.html">Blog</a>
-        <a href="sobre-mi.html" class="active">Sobre Mí</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="cursos.html" class="active">Cursos</a>
         <a href="contacto.html">Contacto</a>
         <div class="nav-actions">
           <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
@@ -92,24 +93,31 @@
           </a>
         </div>
       </nav>
-      <div class="mobile-toggle">☰</div>
+      <div class="mobile-toggle" aria-expanded="false" role="button" aria-label="Menú móvil">☰</div>
     </div>
   </header>
-
-  <!-- Hero de Sobre Mí -->
-  <section class="hero-about">
-    <div class="hero-content" data-aos="fade-right">
-      <h1>El <span class="highlight">Manuscrito de la Guía</span></h1>
-      <p>Una historia de transformación, sanación y conexión con lo más profundo del ser.</p>
-      <a href="contacto.html" class="btn-primary">Agenda una sesión</a>
-    </div>
-    <div class="hero-bg" style="background-image: url('img/hero-sobre-mi.jpg');"></div>
-  </section>
+  
+  <<-- Hero de Sobre Mí -->
+<section class="hero">
+  <div class="hero-bg" style="background-image: url('img/hero-sobre-mi.jpg');"></div>
+  
+  <h1 class="hero-title-coords" style="left: 80%; top: 10%; transform: translateX(-50%);">
+    El <span class="highlight">Manuscrito de la Guía</span>
+  </h1>
+  
+  <p class="hero-subtitle-coords" style="left: 25%; top: 82%; transform: translateX(-50%);">
+    Una historia de transformación, sanación y conexión con lo más profundo del ser.
+  </p>
+  
+  <div class="hero-btn-coords" style="left: 80%; top: 80%; transform: translateX(-50%);">
+    <a href="contacto.html" class="btn-primary">Agenda una sesión</a>
+  </div>
+</section>
 
   <!-- Sección: Pergamino Japonés -->
   <section class="scroll-container">
     <div class="parchment" data-aos="fade-up">
-      <div class="parchment-content" id="typewriter-text">
+      <div class="parchment-content">
         <h2>El Camino de la Guía</h2>
 
         <p><strong>Desde los 4 años, mi juego preferido era curar.</strong> Jugaba a ser enfermera, con una intuición que hoy entiendo: <em>mi alma ya sabía cuál era su propósito</em>.</p>
@@ -150,27 +158,27 @@
   <!-- Separador de tinta -->
   <div class="ink-drip"></div>
 
-  <!-- Pilares del Camino - Versión integrada con pergamino -->
-<section class="pilares-pergamino" data-aos="fade-up">
-  <div class="container">
-    <h2 class="section-title">Pilares del Camino</h2>
-    
-    <div class="pilar-manuscrito">
-      <h3>🌸 Escucha del Corazón</h3>
-      <p>Escucho lo que no se dice. Percibo el silencio, el miedo, la esperanza. Mi terapia comienza allí.</p>
-    </div>
+  <!-- Pilares del Camino -->
+  <section class="pilares-pergamino" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Pilares del Camino</h2>
+      
+      <div class="pilar-manuscrito">
+        <h3>🌸 Escucha del Corazón</h3>
+        <p>Escucho lo que no se dice. Percibo el silencio, el miedo, la esperanza. Mi terapia comienza allí.</p>
+      </div>
 
-    <div class="pilar-manuscrito">
-      <h3>🌀 Integración de Saberes</h3>
-      <p>Un puente entre cuerpo, mente, alma, ciencia y lo divino. Todo está conectado por energía.</p>
-    </div>
+      <div class="pilar-manuscrito">
+        <h3>🌀 Integración de Saberes</h3>
+        <p>Un puente entre cuerpo, mente, alma, ciencia y lo divino. Todo está conectado por energía.</p>
+      </div>
 
-    <div class="pilar-manuscrito">
-      <h3>📜 Transformación Consciente</h3>
-      <p>No se trata de curar, sino de despertar. De redescubrir quién eres más allá de tus heridas.</p>
+      <div class="pilar-manuscrito">
+        <h3>📜 Transformación Consciente</h3>
+        <p>No se trata de curar, sino de despertar. De redescubrir quién eres más allá de tus heridas.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- CTA Final -->
   <section class="cta-full" data-aos="fade-up">
@@ -190,7 +198,7 @@
           <p>Transforma tu energía. Evoluciona tu alma.</p>
         </div>
         <div class="footer-contact">
-          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>✉️ aizenmysticweb@gmail.com</h5>
           <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
         </div>
         <div class="footer-social">
@@ -227,62 +235,21 @@
     // Inicializar AOS
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
 
-    // Menú móvil
+    // Menú móvil con accesibilidad
     document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
       const nav = document.querySelector('.nav');
-      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+      const toggle = document.querySelector('.mobile-toggle');
+      const isOpen = nav.style.display === 'block';
+      nav.style.display = isOpen ? 'none' : 'block';
+      toggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
     });
 
-    // Cambio de idioma
+    // Cambiar idioma
     function toggleLang(e) {
       e.preventDefault();
       const icon = document.querySelector('.lang-icon');
       icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
     }
-
-      // === EFECTO DE ESCRITURA AL CARGAR ===
-document.addEventListener('DOMContentLoaded', () => {
-  const textElement = document.getElementById('typewriter-text');
-  if (!textElement) return;
-
-  // Guardamos el contenido original como texto plano
-  const fullText = textElement.innerHTML
-    .replace(/<[^>]*>/g, '') // Quitamos etiquetas
-    .trim();
-
-  // Pero vamos a reconstruir con etiquetas respetadas
-  const contentNodes = Array.from(textElement.childNodes);
-  textElement.innerHTML = ''; // Limpiamos
-
-  let charIndex = 0;
-  const allText = [];
-
-  // Extraemos texto y etiquetas en orden
-  contentNodes.forEach(node => {
-    if (node.nodeType === 3) { // Texto
-      allText.push(...node.textContent.split(''));
-    } else { // Etiqueta (strong, em, blockquote, etc.)
-      allText.push(node);
-    }
-  });
-
-  // Animación de escritura
-  const type = () => {
-    if (charIndex < allText.length) {
-      const char = allText[charIndex];
-      if (typeof char === 'string') {
-        textElement.innerHTML += char;
-      } else {
-        textElement.appendChild(char.cloneNode(true));
-      }
-      charIndex++;
-      setTimeout(type, 20); // Velocidad: 20ms por carácter
-    }
-  };
-
-  // Iniciar después de un breve delay
-  setTimeout(type, 500);
-});
   </script>
 </body>
 </html>

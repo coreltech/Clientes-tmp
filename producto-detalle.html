@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Detalle del producto - Aizen Mystic. Cristales, amuletos y objetos místicos con intención energética.">
+  <title>Producto | Aizen Mystic</title>
+
+  <!-- Fuentes locales -->
+  <style>
+    @font-face {
+      font-family: 'Adobe Devanagari';
+      src: url('fonts/AdobeDevanagari-Regular.woff2') format('woff2'),
+           url('fonts/AdobeDevanagari-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SybillaPro-Book';
+      src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
+           url('fonts/SybillaPro-Book.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Brilliant Signature';
+      src: url('fonts/Brilliant signature  regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Brilliant Signature';
+      src: url('fonts/Brilliant signature 1 slant.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    :root {
+      --font-devanagari: 'Adobe Devanagari', serif;
+      --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
+    }
+
+    body {
+      font-family: var(--font-sybilla);
+      color: #1A1A1A;
+    }
+
+    h1, h2, h3, .highlight {
+      font-family: var(--font-devanagari);
+    }
+  </style>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Snipcart CSS -->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Aizen Mystic" class="logo-img">
+        <span class="logo-text">AIZEN MYSTIC</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="blog.html">Blog</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="contacto.html">Contacto</a>
+        <div class="nav-actions">
+          <!-- Carrito Snipcart -->
+          <a href="#" class="nav-cart" data-snipcart-checkout aria-label="Ver carrito de compras">
+            <svg class="nav-cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="nav-cart-count" data-snipcart-total-items>0</span>
+          </a>
+          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+            <span class="lang-icon">🌐</span>
+          </a>
+        </div>
+      </nav>
+      <div class="mobile-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero del Producto -->
+  <section class="hero-shop" data-aos="fade">
+    <div class="hero-content">
+      <h1 id="producto-titulo">Cargando...</h1>
+      <p id="producto-descripcion-breve">Cargando detalles del producto...</p>
+    </div>
+    <div class="hero-bg" style="background-image: url('img/hero-tienda.jpg');"></div>
+  </section>
+
+  <!-- Contenido del Producto -->
+  <section class="product-detail" style="padding: 80px 0; background: #F8F5F2;">
+    <div class="container" data-aos="fade-up">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+        <!-- Imagen del producto -->
+        <div>
+          <img id="producto-imagen" src="img/loading.jpg" alt="Cargando producto..." style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        </div>
+
+        <!-- Información del producto -->
+        <div>
+          <h2 id="producto-nombre">Cargando nombre...</h2>
+          <p class="price" id="producto-precio" style="font-size: 1.5em; color: #903AA8; font-weight: 600; margin-bottom: 20px;">$0.00</p>
+
+          <p style="line-height: 1.7; margin-bottom: 30px; color: #5D4037;" id="producto-descripcion-larga">
+            Cargando descripción...
+          </p>
+
+          <h3 style="color: #1A1A1A; margin: 25px 0 15px;">Incluye:</h3>
+          <ul id="producto-incluye" style="margin-left: 20px; margin-bottom: 30px; color: #5D4037; line-height: 1.7;">
+            <li>Cargando...</li>
+          </ul>
+
+          <!-- Botón de compra Snipcart -->
+          <button
+            id="producto-boton"
+            class="snipcart-add-item btn-primary"
+            style="width: 100%;"
+            data-item-name=""
+            data-item-price=""
+            data-item-id=""
+            data-item-image=""
+            data-item-url="producto-detalle.html"
+            data-item-description="">
+            Añadir al carrito
+          </button>
+
+          <p style="font-size: 0.9em; color: #5D4037; margin-top: 15px; text-align: center;">
+            Envío disponible a nivel nacional. Entrega en 3-5 días hábiles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Energía del Cristal -->
+  <section class="parchment" style="padding: 80px 0;">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Energía del Objeto</h2>
+      <div class="parchment-content" style="max-width: 800px; margin: 30px auto; line-height: 1.8; color: #5D4037; text-align: left;" id="producto-energia">
+        <p>Cargando energía del producto...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta-full" data-aos="fade-up">
+    <div class="container">
+      <h2>¿Listo para tu transformación?</h2>
+      <p>Este objeto puede ser el inicio de una nueva etapa de claridad y poder interior.</p>
+      <a href="contacto.html" class="btn-primary">Contáctame para una lectura personalizada</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
+          <p>Transforma tu energía. Evoluciona tu alma.</p>
+        </div>
+        <div class="footer-contact">
+          <h5>✉️ aurizquierdo21@gmail.com</h5>
+          <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
+        </div>
+        <div class="footer-social">
+          <p>Sígueme en:</p>
+          <div class="social-links">
+            <a href="#" target="_blank">Instagram</a> •
+            <a href="#" target="_blank">YouTube</a> •
+            <a href="#" target="_blank">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
+          <p><a href="#">Política de privacidad</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+
+  <!-- Snipcart Config -->
+  <div hidden id="snipcart" data-api-key="ZWZkOWEyMTItZjg4Yy00ZmI5LWI5MWItOTQyNzc2ZDcwYjIwNjM4OTE5NDQxOTg3NzI5OTIx"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+  <script>
+    // === LISTA DE PRODUCTOS (añade más aquí) ===
+    const productos = {
+      "amatista-sagrada": {
+        nombre: "Amatista Sagrada",
+        precio: 25.00,
+        imagen: "img/producto-amatista.jpg",
+        descripcionBreve: "Cristal de alta vibración para protección y conexión espiritual.",
+        descripcionLarga: "Cristal de alta vibración para protección y conexión espiritual. Cada pieza ha sido seleccionada y armonizada con intención.",
+        incluye: [
+          "1 cristal de amatista natural (tamaño aproximado: 4-6 cm)",
+          "Guía energética impresa a mano",
+          "Bolsa de lino con símbolos de protección"
+        ],
+        energia: `
+          <p><strong>Propiedades Energéticas:</strong></p>
+          <ul style="margin-left: 20px;">
+            <li><strong>Protección:</strong> forma un escudo energético contra lo negativo.</li>
+            <li><strong>Intuición:</strong> activa el tercer ojo y fortalece la clarividencia.</li>
+            <li><strong>Sanación:</strong> equilibra las emociones y calma la ansiedad.</li>
+            <li><strong>Espiritualidad:</strong> conecta con planos superiores y maestros internos.</li>
+          </ul>
+          <p>Este cristal ha sido limpiado con sonido de cuencos tibetanos y programado con la intención de <em>protección, paz y despertar interior</em>.</p>
+          <blockquote style="background: #903AA8; color: white; padding: 20px; border-radius: 10px; margin: 30px 0; font-style: italic; text-align: center;">
+            “La amatista es el vino del espíritu. Embriaga sin alcohol, ilumina sin fuego.”
+          </blockquote>
+        `
+      },
+      "incienso-shoyeido": {
+        nombre: "Incienso Shoyeido",
+        precio: 18.00,
+        imagen: "img/producto-incienso.jpg",
+        descripcionBreve: "Armoniza tu espacio con fragancia japonesa de sándalo y jazmín.",
+        descripcionLarga: "Armoniza tu espacio con fragancia japonesa de sándalo y jazmín. Ideal para meditación, limpieza energética y ritual.",
+        incluye: [
+          "1 caja de incienso Shoyeido (20 varillas)",
+          "Portaincienso de cerámica",
+          "Guía de intención para rituales"
+        ],
+        energia: `
+          <p><strong>Propiedades Energéticas:</strong></p>
+          <ul style="margin-left: 20px;">
+            <li><strong>Purificación:</strong> limpia el ambiente de energías densas.</li>
+            <li><strong>Concentración:</strong> mejora la meditación.</li>
+            <li><strong>Armonía:</strong> equilibra los chakras emocionales.</li>
+          </ul>
+          <p>Hecho a mano en Japón, con resinas naturales. Encendido bajo luna creciente.</p>
+          <blockquote style="background: #903AA8; color: white; padding: 20px; border-radius: 10px; margin: 30px 0; font-style: italic; text-align: center;">
+            “El humo sube, la mente desciende. El incienso abre el camino.”
+          </blockquote>
+        `
+      },
+      "amuleto-proteccion": {
+        nombre: "Amuleto de Protección",
+        precio: 30.00,
+        imagen: "img/producto-amuleto.jpg",
+        descripcionBreve: "Talismán energético grabado con símbolos ancestrales.",
+        descripcionLarga: "Talismán energético grabado con símbolos ancestrales. Protege, fortalece y activa tu propósito divino.",
+        incluye: [
+          "Amuleto de metal sagrado (3 cm)",
+          "Cadena de acero quirúrgico",
+          "Certificado de programación energética"
+        ],
+        energia: `
+          <p><strong>Propiedades Energéticas:</strong></p>
+          <ul style="margin-left: 20px;">
+            <li><strong>Escudo personal:</strong> bloquea ataques energéticos.</li>
+            <li><strong>Autoestima:</strong> fortalece el campo áurico.</li>
+            <li><strong>Intención:</strong> activa tu propósito divino.</li>
+          </ul>
+          <p>Programado bajo ritual de luna llena y enterrado 7 días en tierra sagrada.</p>
+          <blockquote style="background: #903AA8; color: white; padding: 20px; border-radius: 10px; margin: 30px 0; font-style: italic; text-align: center;">
+            “No es solo un amuleto. Es un pacto con tu alma.”
+          </blockquote>
+        `
+      }
+    };
+
+    // === OBTENER ID DESDE LA URL ===
+    function obtenerIdProducto() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    // === CARGAR PRODUCTO ===
+    document.addEventListener('DOMContentLoaded', () => {
+      const id = obtenerIdProducto();
+      const producto = productos[id];
+
+      if (!producto) {
+        document.body.innerHTML = `
+          <div style="text-align: center; padding: 100px; font-family: var(--font-sybilla);">
+            <h1>Producto no encontrado</h1>
+            <p>El producto que buscas no existe.</p>
+            <a href="tienda.html" class="btn-primary" style="margin-top: 20px; display: inline-block;">← Volver a la tienda</a>
+          </div>
+        `;
+        return;
+      }
+
+      // Actualiza el DOM
+      document.getElementById('producto-titulo').textContent = producto.nombre;
+      document.getElementById('producto-descripcion-breve').textContent = producto.descripcionBreve;
+      document.getElementById('producto-nombre').textContent = producto.nombre;
+      document.getElementById('producto-precio').textContent = `$${producto.precio}.00`;
+      document.getElementById('producto-descripcion-larga').textContent = producto.descripcionLarga;
+      document.getElementById('producto-imagen').src = producto.imagen;
+      document.getElementById('producto-imagen').alt = producto.nombre;
+      document.getElementById('producto-energia').innerHTML = producto.energia;
+
+      // Llena "Incluye"
+      const ul = document.getElementById('producto-incluye');
+      ul.innerHTML = '';
+      producto.incluye.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+
+      // Configura Snipcart
+      const boton = document.getElementById('producto-boton');
+      boton.setAttribute('data-item-name', producto.nombre);
+      boton.setAttribute('data-item-price', producto.precio);
+      boton.setAttribute('data-item-id', id);
+      boton.setAttribute('data-item-image', producto.imagen);
+      boton.setAttribute('data-item-description', producto.descripcionBreve);
+    });
+
+    // === Inicializar AOS y menú móvil ===
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
+      const nav = document.querySelector('.nav');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+
+    function toggleLang(e) {
+      e.preventDefault();
+      const icon = document.querySelector('.lang-icon');
+      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+    }
+  </script>
+</body>
+</html>
