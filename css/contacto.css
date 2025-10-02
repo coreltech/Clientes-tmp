@@ -35,13 +35,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Brilliant Signature';
-  src: url('fonts/Brilliant signature  regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 body {
   font-family: var(--font-sybilla);
@@ -106,10 +99,11 @@ h1, h2, h3, .highlight {
 }
 
 .logo-text {
-  font-family: 'Brilliant Signature', cursive;
-  font-size: 1.4em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.5em;
   color: var(--negro);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
@@ -165,33 +159,12 @@ h1, h2, h3, .highlight {
   cursor: pointer;
   color: var(--negro);
 }
-/* === 3. HERO DE CONTACTO =========================================== */
-.hero-contact {
+/* === HERO UNIVERSAL - POSICIONAMIENTO POR COORDENADAS (X, Y) ====== */
+.hero {
   position: relative;
-  height: 60vh;
-  display: flex;
-  align-items: center;
+  height: 70vh;
   overflow: hidden;
   margin-top: 60px;
-}
-
-.hero-contact .hero-content {
-  z-index: 2;
-  max-width: 700px;
-  padding: 0 20px;
-  color: white;
-}
-
-.hero-contact h1 {
-  font-size: 3em;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-}
-
-.hero-contact p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
 }
 
 .hero-bg {
@@ -200,7 +173,8 @@ h1, h2, h3, .highlight {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('img/hero-contacto.jpg') center / cover no-repeat;
+  background-size: cover;
+  background-position: center;
   z-index: -1;
 }
 
@@ -213,6 +187,52 @@ h1, h2, h3, .highlight {
   height: 100%;
   background: linear-gradient(to bottom, rgba(144, 58, 168, 0.3), rgba(0,0,0,0.6));
   z-index: -1;
+}
+
+/* --- Título posicionable --- */
+.hero-title-coords {
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-family: 'Adobe Devanagari', serif;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Subtítulo posicionable --- */
+.hero-subtitle-coords {
+  position: absolute;
+  color: var(--gris-medio);
+  font-size: 1.2em;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  z-index: 2;
+  max-width: 600px;
+  text-align: center;
+  left: 50%;
+  top: 52%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Botón o CTA posicionable --- */
+.hero-btn-coords {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 62%;
+  transform: translateX(-50%);
 }
 /* === 4. FORMULARIO Y CONTACTO ====================================== */
 .contact-main {
@@ -442,15 +462,15 @@ h1, h2, h3, .highlight {
   .footer-content { grid-template-columns: 1fr; text-align: center; }
   .footer-contact, .footer-social { display: flex; flex-direction: column; align-items: center; }
 }
-/* === HERO UNIVERSAL - POSICIONAMIENTO POR COORDENADAS (X, Y) ====== */
-.hero {
+/* === HERO GENÉRICO REUTILIZABLE === */
+.hero-section {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
-  margin-top: 60px;
+  margin-top: 60px; /* altura del header fijo */
 }
 
-.hero-bg {
+.hero-section .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -461,59 +481,93 @@ h1, h2, h3, .highlight {
   z-index: -1;
 }
 
-.hero-bg::before {
+.hero-section .hero-bg::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(144, 58, 168, 0.3), rgba(0,0,0,0.6));
+  background: linear-gradient(to bottom, rgba(144, 58, 168, 0.2), rgba(0,0,0,0.6));
   z-index: -1;
 }
 
-/* --- Título posicionable --- */
-.hero-title-coords {
-  position: absolute;
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
   color: white;
-  font-size: 3em;
-  font-family: 'Adobe Devanagari', serif;
+}
+
+.hero-section .hero-title {
+  font-size: 3.5em;
+  font-family: var(--font-devanagari);
   text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-  z-index: 2;
-  max-width: 800px;
-  text-align: center;
-  left: 50%;
-  top: 40%;
-  transform: translateX(-50%);
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  max-width: 90%;
 }
 
-/* --- Subtítulo posicionable --- */
-.hero-subtitle-coords {
-  position: absolute;
-  color: var(--gris-medio);
-  font-size: 1.2em;
+.hero-section .hero-subtitle {
+  font-size: 1.4em;
+  margin: 20px 0;
+  max-width: 700px;
   text-shadow: 0 1px 5px rgba(0,0,0,0.7);
-  z-index: 2;
-  max-width: 600px;
-  text-align: center;
-  left: 50%;
-  top: 52%;
-  transform: translateX(-50%);
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* --- Botón o CTA posicionable --- */
-.hero-btn-coords {
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 62%;
-  transform: translateX(-50%);
+.hero-section .hero-cta {
+  margin-top: 20px;
+}
+
+/* === Responsive móvil para hero genérico === */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 90vh;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  .hero-section .hero-bg,
+  .hero-section .hero-bg::before {
+    position: absolute;
+  }
+
+  .hero-section .hero-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+  }
+
+  .hero-section .hero-title {
+    font-size: 2.2em;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 1.1em;
+    white-space: normal;
+  }
+
+  .hero-section .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+  }
+
+  .hero-section .hero-cta a {
+    width: 100%;
+    text-align: center;
+  }
 }

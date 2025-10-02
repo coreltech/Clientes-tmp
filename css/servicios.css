@@ -13,6 +13,7 @@
   --negro: #1A1A1A;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
+  --footer-bg: #3E2723;
   --font-devanagari: 'Adobe Devanagari', serif;
   --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
 }
@@ -30,14 +31,6 @@
   font-family: 'SybillaPro-Book';
   src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
        url('fonts/SybillaPro-Book.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Brilliant Signature';
-  src: url('fonts/Brilliant signature  regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -106,10 +99,11 @@ h1, h2, h3, .highlight {
 }
 
 .logo-text {
-  font-family: 'Brilliant Signature', cursive;
-  font-size: 1.4em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.5em;
   color: var(--negro);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
@@ -182,38 +176,12 @@ h1, h2, h3, .highlight {
   cursor: pointer;
   color: var(--negro);
 }
-/* === 3. HERO DE SERVICIOS ========================================== */
+/* === 3. HERO DE SERVICIOS - POSICIONAMIENTO POR COORDENADAS (X, Y) === */
 .hero-services {
   position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
+  height: 80vh;
   overflow: hidden;
   margin-top: 60px;
-}
-
-.hero-services .hero-content {
-  z-index: 2;
-  max-width: 700px;
-  padding: 0 20px;
-  color: white;
-}
-
-.hero-services h1 {
-  font-size: 3em;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-}
-
-.hero-services p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
-}
-
-.hero-services .btn-primary {
-  background: var(--morado);
-  color: white;
 }
 
 .hero-bg {
@@ -222,7 +190,8 @@ h1, h2, h3, .highlight {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('img/hero-servicios.jpg') center / cover no-repeat;
+  background-size: cover;
+  background-position: center;
   z-index: -1;
 }
 
@@ -236,10 +205,76 @@ h1, h2, h3, .highlight {
   background: linear-gradient(to bottom, rgba(144, 58, 168, 0.3), rgba(0,0,0,0.6));
   z-index: -1;
 }
+
+/* --- Logo central (posicionable) --- */
+.hero-logo-center-coords {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.logoux-img {
+  width: 40px;
+  height: auto;
+  border-radius: 8px;
+  opacity: 1 !important;
+  filter: brightness(1) contrast(1.1);
+}
+
+/* --- Título posicionable --- */
+.hero-title-coords {
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-family: 'Adobe Devanagari', serif;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  /* Coordenadas: ajusta aquí */
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Subtítulo posicionable --- */
+.hero-subtitle-coords {
+  position: absolute;
+  color: var(--gris-medio);
+  font-size: 1.2em;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  z-index: 2;
+  max-width:900px;
+  text-align: center;
+  /* Ajusta top para subir/bajar */
+  left: 50%;
+  top: 52%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Botón posicionable --- */
+.hero-btn-coords {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 62%;
+  transform: translateX(-50%);
+}
 /* === 4. ANIMACIONES DE ENTRADA ===================================== */
 .anim-element {
   position: fixed;
-  top: 25%;
+  top: 30%;
   left: -150px;
   transform: translateY(-50%) rotate(0deg);
   z-index: 99999;
@@ -408,7 +443,7 @@ h1, h2, h3, .highlight {
 }
 /* === 8. FOOTER ===================================================== */
 .footer {
-  background: var(--negro);
+  background: var(--footer-bg);
   color: var(--beige);
   padding: 30px 0 15px;
   font-size: 0.85em;
@@ -575,4 +610,113 @@ h1, h2, h3, .highlight {
   left: 50%;
   top: 62%;
   transform: translateX(-50%);
+}
+/* === HERO GENÉRICO REUTILIZABLE === */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  margin-top: 60px; /* altura del header fijo */
+}
+
+.hero-section .hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero-section .hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(144, 58, 168, 0.2), rgba(0,0,0,0.6));
+  z-index: -1;
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.hero-section .hero-title {
+  font-size: 3.5em;
+  font-family: var(--font-devanagari);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  margin: 0;
+  max-width: 90%;
+}
+
+.hero-section .hero-subtitle {
+  font-size: 1.4em;
+  margin: 20px 0;
+  max-width: 700px;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+}
+
+.hero-section .hero-cta {
+  margin-top: 20px;
+}
+
+/* === Responsive móvil para hero genérico === */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 90vh;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+  }
+
+  .hero-section .hero-bg,
+  .hero-section .hero-bg::before {
+    position: absolute;
+  }
+
+  .hero-section .hero-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 0;
+  }
+
+  .hero-section .hero-title {
+    font-size: 2.2em;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .hero-section .hero-subtitle {
+    font-size: 1.1em;
+    white-space: normal;
+  }
+
+  .hero-section .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0;
+  }
+
+  .hero-section .hero-cta a {
+    width: 100%;
+    text-align: center;
+  }
 }
