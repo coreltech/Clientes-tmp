@@ -13,7 +13,7 @@
   --negro: #1A1A1A;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
-  --footer-bg: #4E342E; /* nuevo color de footer */
+  --footer-bg: #643a0e; /* nuevo color de footer */
   --font-devanagari: 'Adobe Devanagari', serif;
   --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
 }
@@ -112,7 +112,7 @@ h1, h2, h3, .highlight {
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 10px;
   text-decoration: none;
 }
@@ -652,4 +652,9 @@ blockquote {
     max-width: 300px;
     margin: 0 auto;
   }
+}
+.whatsapp-btn img {
+  width: 32px;
+  height: auto;
+  display: block;
 }

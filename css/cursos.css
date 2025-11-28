@@ -1,18 +1,19 @@
 /* =================================================================== */
-/* === CURSOS.CSS - ESTILOS EXCLUSIVOS DE cursos.html =============== */
+/* === CURSOS.CSS - ESTILOS EXCLUSIVOS DE cursos.html ========== */
 /* Proyecto: Aizen Mystic                                              */
-/* Página: cursos.html                                                 */
-/* Fecha: 02 de septiembre de 2025                                     */
-/* Versión: Modular, con hero posicionable y sin Snipcart              */
+/* Página: servicios.html                                              */
+/* Fecha: 10 de septiembre de 2025                                     */
+/* Versión: Modular, limpia, sin dependencias                          */
 /* =================================================================== */
 
 /* === 1. VARIABLES Y TIPOGRAFÍA ====================================== */
 :root {
   --morado: #903AA8;
   --beige: #F8F5F2;
-  --negro: #1A1A1A;
+  --negro: #643a0e;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
+  --footer-bg: #3E2723;
   --font-devanagari: 'Adobe Devanagari', serif;
   --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
 }
@@ -45,6 +46,7 @@ body {
 h1, h2, h3, .highlight {
   font-family: var(--font-devanagari);
 }
+
 /* === 2. HEADER ===================================================== */
 .header {
   background-color: var(--beige);
@@ -147,9 +149,26 @@ h1, h2, h3, .highlight {
   gap: 18px;
 }
 
+.nav-cart-icon,
 .lang-icon {
   font-size: 1.3em;
   color: var(--morado);
+}
+
+.nav-cart-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--morado);
+  color: white;
+  font-size: 0.7em;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 
 .mobile-toggle {
@@ -158,224 +177,190 @@ h1, h2, h3, .highlight {
   cursor: pointer;
   color: var(--negro);
 }
-/* === 3. HERO DE CURSOS - CON CONTROL DE COORDENADAS (X, Y) ======= */
-.hero {
+
+/* === HERO DE CURSOS - CORREGIDO PARA ESCRITORIO Y MÓVIL === */
+.hero-cursos {
   position: relative;
-  height: 60vh;
+  height: 80vh;
+  margin-top: 60px; /* altura del header fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* texto a la izquierda en escritorio */
+  padding: 0 10%;
   overflow: hidden;
-  margin-top: 60px;
 }
 
-.hero-bg {
+.hero-cursos .hero-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('img/hero-cursos.jpg') center / cover no-repeat;
-  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
 }
 
-.hero-bg::before {
+.hero-cursos .hero-bg::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(144, 58, 168, 0.3), rgba(0,0,0,0.6));
+  background: linear-gradient(to right, rgba(144, 58, 168, 0.4), rgba(0,0,0,0.7));
   z-index: -1;
 }
 
-/* --- Título posicionable --- */
-.hero-title-coords {
-  position: absolute;
-  color: white;
-  font-size: 3em;
-  font-family: 'Adobe Devanagari', serif;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-  z-index: 2;
-  max-width: 800px;
-  text-align: center;
-  /* Coordenadas: ajusta aquí */
-  left: 10%;
-  top: 10%;
-  transform: translateX(-50%);
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* --- Subtítulo posicionable --- */
-.hero-subtitle-coords {
-  position: absolute;
-  color: var(--gris-medio);
-  font-size: 1.2em;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+.hero-cursos .hero-content {
+  position: relative;
   z-index: 2;
   max-width: 600px;
-  text-align: center;
-  /* Ajusta top para subir/bajar */
-  left: 50%;
-  top: 52%;
-  transform: translateX(-50%);
+  color: white;
+  text-align: left;
+}
+
+.hero-cursos .hero-title {
+  font-family: var(--font-devanagari);
+  font-size: 3em;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
 }
 
-/* --- Botón posicionable --- */
-.hero-btn-coords {
-  position: absolute;
-  z-index: 2;
-  left: 50%;
-  top: 62%;
-  transform: translateX(-50%);
-}
-/* === 4. INTRODUCCIÓN LIGERA ======================================== */
-.intro-light {
-  padding: 60px 0;
-  background: var(--beige);
+.hero-cursos .hero-subtitle {
+  font-size: 1.2em;
+  margin: 15px 0;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  line-height: 1.5;
 }
 
-.intro-light h2 {
-  color: var(--morado);
-  font-size: 2em;
-  margin-bottom: 20px;
-  text-align: center;
+/* === MÓVIL: centrar todo === */
+@media (max-width: 768px) {
+  .hero-cursos {
+    height: auto;
+    min-height: 70vh;
+    padding: 0 5%;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-cursos .hero-content {
+    max-width: 95%;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .hero-cursos .hero-title {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  .hero-cursos .hero-subtitle {
+    font-size: 1.1em;
+  }
+
+  .hero-cursos .btn-primary {
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto 0;
+  }
 }
 
-.intro-light p {
-  font-size: 1.1em;
-  line-height: 1.7;
-  color: var(--gris-oscuro);
-  text-align: center;
+/* === 4. ANIMACIONES DE ENTRADA ===================================== */
+.anim-element {
+  position: fixed;
+  top: 30%;
+  left: -150px;
+  transform: translateY(-50%) rotate(0deg);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
 }
-/* === 5. CURSOS DESTACADOS ========================================== */
-.cursos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+.anim-img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 15px rgba(144, 58, 168, 0.8));
+}
+
+@keyframes slideToCenter {
+  0% { left: -150px; transform: translateY(-50%) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { left: 54%; margin-left: -60px; transform: translateX(-50%) translateY(-50%) rotate(360deg); opacity: 1; }
+}
+
+@keyframes slideToRight {
+  0% { left: 54%; margin-left: -60px; transform: translateX(-50%) translateY(-50%) rotate(360deg); opacity: 1; }
+  100% { left: calc(100% - 130px); transform: translateX(-100%) translateY(-50%) rotate(720deg); opacity: 0; }
+}
+
+.anim-element.slide-center {
+  animation: slideToCenter 1.8s ease-out forwards;
+}
+
+.anim-element.slide-right {
+  animation: slideToRight 1.5s ease-out forwards;
+}
+
+/* === SERVICIOS: TARJETAS CON IMAGEN CUADRADA 1:1 Y ALINEACIÓN SUPERIOR === */
+.service-card-full {
+  display: flex;
+  align-items: flex-start;
   gap: 40px;
-  margin-top: 40px;
-}
-
-.curso-card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  margin-bottom: 50px;
+  padding: 30px;
+  box-sizing: border-box;
+  
 }
 
-.curso-card:hover {
-  transform: translateY(-8px);
-}
-
-.curso-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.curso-content h3 {
-  margin: 15px 0;
-  color: var(--morado);
-  font-size: 1.4em;
-}
-
-.curso-content p {
-  margin: 5px 0;
-  color: var(--gris-oscuro);
-  line-height: 1.5;
-}
-/* === 6. EVENTOS RECURRENTES ======================================== */
-.eventos-recurrentes {
-  padding: 80px 0;
-  background: var(--beige);
-}
-
-.eventos-recurrentes .section-title {
-  text-align: center;
-  font-size: 2.2em;
-  color: var(--negro);
-  margin-bottom: 20px;
-}
-
-.eventos-recurrentes h3 {
-  color: var(--morado);
-  margin-bottom: 10px;
-}
-
-.eventos-recurrentes p {
-  color: var(--gris-oscuro);
-  line-height: 1.5;
-  margin: 5px 0;
-}
-/* === 7. PERGAMINO JAPONÉS ========================================== */
-.scroll-container {
-  padding: 80px 0;
-  background: var(--beige);
-  text-align: center;
-}
-
-.parchment {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 60px;
-  background: url('../img/parchment-texture.jpg') no-repeat center;
-  background-size: cover;
-  border: 1px solid var(--gris-medio);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  position: relative;
+.service-card-full .service-image {
+  width: 280px;
+  height: 280px;
+  flex: 0 0 auto;
   overflow: hidden;
-}
-
-.parchment::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border: 1px dashed rgba(144, 58, 168, 0.15);
-  pointer-events: none;
-  border-radius: 10px;
-}
-
-.parchment-content {
   position: relative;
-  z-index: 2;
-  color: var(--negro);
-  line-height: 1.8;
-  text-align: left;
+  border-radius: 8px;
 }
 
-.parchment-content ul {
-  margin: 20px 0;
-  padding-left: 20px;
+.service-card-full .service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.parchment-content li {
-  margin-bottom: 12px;
+.service-card-full .service-content {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.service-content h3 {
+  margin-bottom: 15px;
+  color: var(--morado);
+  font-size: 1.5em;
+}
+
+.service-content p {
+  margin-bottom: 10px;
+  line-height: 1.6;
   color: var(--gris-oscuro);
 }
 
-.parchment-content blockquote {
-  background: var(--morado);
-  color: white;
-  font-style: italic;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 30px 0;
-  text-align: center;
-  font-size: 1.1em;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  border-left: 5px solid #D4A52A;
-}
-/* === 8. BOTONES ==================================================== */
+/* === 6. BOTONES ==================================================== */
 .btn-primary {
   background: var(--morado);
   color: white;
@@ -394,7 +379,7 @@ h1, h2, h3, .highlight {
 
 .btn-small {
   display: block;
-  margin: 20px auto 0;
+  margin: 0 auto 15px;
   padding: 10px 20px;
   background: var(--morado);
   color: white;
@@ -410,7 +395,8 @@ h1, h2, h3, .highlight {
   background: #7a2f8d;
   transform: translateY(-2px);
 }
-/* === 9. CTA FINAL ================================================== */
+
+/* === 7. CTA FINAL ================================================== */
 .cta-full {
   background: var(--beige);
   color: var(--negro);
@@ -430,9 +416,10 @@ h1, h2, h3, .highlight {
   color: var(--gris-oscuro);
   font-size: 1.1em;
 }
-/* === 10. FOOTER ==================================================== */
+
+/* === 8. FOOTER ===================================================== */
 .footer {
-  background: var(--negro);
+  background: var(--footer-bg);
   color: var(--beige);
   padding: 30px 0 15px;
   font-size: 0.85em;
@@ -451,21 +438,14 @@ h1, h2, h3, .highlight {
   opacity: 0.95;
 }
 
-.footer-contact a {
-  color: var(--morado);
-  text-decoration: none;
-}
-
-.social-links a {
-  color: var(--morado);
-  text-decoration: none;
-}
-
+.footer-contact a,
+.social-links a,
 .footer-legal a {
   color: var(--morado);
   text-decoration: none;
 }
-/* === 11. WHATSAPP FLUTUANTE ======================================== */
+
+/* === 9. WHATSAPP Y OTROS =========================================== */
 .whatsapp-btn {
   position: fixed;
   bottom: 30px;
@@ -483,53 +463,48 @@ h1, h2, h3, .highlight {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 1000;
 }
-/* === 12. SAKURA FLOTANDO =========================================== */
-.sakura-fall {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.2;
-}
 
-.petal {
-  position: absolute;
-  font-size: 1.5em;
-  opacity: 0;
-  animation: fall-sakura 25s linear infinite;
-}
-
-@keyframes fall-sakura {
-  0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
-  10% { opacity: 0.7; }
-  90% { opacity: 0.7; }
-  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
-}
-/* === 13. RESPONSIVE (móviles) ====================================== */
+/* === 10. RESPONSIVE (móviles) ====================================== */
 @media (max-width: 768px) {
   .nav { display: none; }
   .mobile-toggle { display: block; }
-  .hero-title-coords,
-  .hero-subtitle-coords,
-  .hero-btn-coords {
-    left: 50%;
-    transform: translateX(-50%);
+  .service-card-full {
+    flex-direction: column;
+    align-items: center;
   }
-  .hero-title-coords { font-size: 2.2em; top: 38%; }
-  .hero-subtitle-coords { font-size: 1em; top: 50%; }
-  .hero-btn-coords { top: 60%; }
+  .service-card-full .service-image {
+    width: 280px;
+  }
+  .service-content {
+    width: 100%;
+    align-self: stretch;
+    padding: 20px 30px;
+  }
+  .hero-services h1 { font-size: 2.2em; }
   .footer-content { grid-template-columns: 1fr; text-align: center; }
   .footer-contact, .footer-social { display: flex; flex-direction: column; align-items: center; }
 }
+
+@media (max-width: 768px) {
+  .hero-title-coords {
+    font-size: 2.2em;
+    white-space: normal;
+    max-width: 90%;
+  }
+
+  .hero-subtitle-coords {
+    font-size: 1em;
+    white-space: normal;
+    max-width: 90%;
+  }
+}
+
 /* === HERO GENÉRICO REUTILIZABLE === */
 .hero-section {
   position: relative;
   height: 80vh;
   overflow: hidden;
-  margin-top: 60px; /* altura del header fijo */
+  margin-top: 60px;
 }
 
 .hero-section .hero-bg {
@@ -586,7 +561,7 @@ h1, h2, h3, .highlight {
   margin-top: 20px;
 }
 
-/* === Responsive móvil para hero genérico === */
+/* Responsive móvil para hero genérico */
 @media (max-width: 768px) {
   .hero-section {
     height: 90vh;
@@ -631,5 +606,142 @@ h1, h2, h3, .highlight {
   .hero-section .hero-cta a {
     width: 100%;
     text-align: center;
+  }
+}
+/* === Menú móvil accesible === */
+.nav.mobile-open {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: var(--beige);
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 15px;
+  z-index: 999;
+}
+/* === CORRECCIONES MÓVIL - SERVICIOS.HTML (NO TOCA ESCRITORIO) === */
+@media (max-width: 768px) {
+  /* Menú hamburguesa funcional */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--beige);
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+  }
+
+  .nav.mobile-open {
+    display: flex !important;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  /* Hero: convertir a layout centrado en móvil */
+  .hero-title-coords,
+  .hero-subtitle-coords,
+  .hero-btn-coords,
+  .hero-logo-center-coords {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    white-space: normal !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-logo-center-coords {
+    margin-top: 30vh;
+    margin-bottom: 20px;
+  }
+
+  .hero-title-coords {
+    font-size: 2em;
+    margin: 20px auto;
+  }
+
+  .hero-subtitle-coords {
+    font-size: 1.1em;
+    margin: 10px auto 25px;
+  }
+
+  .hero-btn-coords {
+    margin-top: 20px;
+  }
+
+  .hero-btn-coords .btn-primary {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  /* Tarjetas de servicio: apilar en móvil */
+  .service-card-full {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .service-card-full .service-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .service-card-full .service-image img {
+    position: static;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Footer: apilar columnas */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-contact,
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 40px !important; /* ✅ Solución adaptativa */
+    z-index: 9999 !important;
+    background: white !important;
+    color: #1A1A1A !important;
+    border: 2 mim solid #903AA8 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 }

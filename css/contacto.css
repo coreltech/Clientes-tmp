@@ -10,7 +10,7 @@
 :root {
   --morado: #903AA8;
   --beige: #F8F5F2;
-  --negro: #1A1A1A;
+  --negro: #643a0e;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
   --font-devanagari: 'Adobe Devanagari', serif;
@@ -153,16 +153,10 @@ h1, h2, h3, .highlight {
   color: var(--morado);
 }
 
-.mobile-toggle {
-  display: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  color: var(--negro);
-}
 /* === HERO UNIVERSAL - POSICIONAMIENTO POR COORDENADAS (X, Y) ====== */
 .hero {
   position: relative;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
   margin-top: 60px;
 }
@@ -199,8 +193,8 @@ h1, h2, h3, .highlight {
   z-index: 2;
   max-width: 800px;
   text-align: center;
-  left: 50%;
-  top: 40%;
+  left: 78%;
+  top: 7%;
   transform: translateX(-50%);
   margin: 0;
   white-space: nowrap;
@@ -212,13 +206,13 @@ h1, h2, h3, .highlight {
 .hero-subtitle-coords {
   position: absolute;
   color: var(--gris-medio);
-  font-size: 1.2em;
+  font-size: 1.6em;
   text-shadow: 0 1px 5px rgba(0,0,0,0.7);
   z-index: 2;
-  max-width: 600px;
+  max-width: 1000px;
   text-align: center;
   left: 50%;
-  top: 52%;
+  top: 85%;
   transform: translateX(-50%);
   margin: 0;
   white-space: nowrap;
@@ -452,16 +446,6 @@ h1, h2, h3, .highlight {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 1000;
 }
-/* === 11. RESPONSIVE (móviles) ====================================== */
-@media (max-width: 768px) {
-  .nav { display: none; }
-  .mobile-toggle { display: block; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .newsletter-form { flex-direction: column; }
-  .newsletter-form input { width: 100%; }
-  .footer-content { grid-template-columns: 1fr; text-align: center; }
-  .footer-contact, .footer-social { display: flex; flex-direction: column; align-items: center; }
-}
 /* === HERO GENÉRICO REUTILIZABLE === */
 .hero-section {
   position: relative;
@@ -523,51 +507,131 @@ h1, h2, h3, .highlight {
 .hero-section .hero-cta {
   margin-top: 20px;
 }
-
-/* === Responsive móvil para hero genérico === */
+/* === ESTILOS MÓVIL - CORREGIDO Y AL FINAL === */
 @media (max-width: 768px) {
-  .hero-section {
-    height: 90vh;
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 15px;
+  /* Forzar visibilidad del ícono hamburguesa */
+  .mobile-toggle {
+    display: block !important;
+    position: fixed !important;
+    top: 15px !important;
+    right: 15px !important; /* ✅ 15px desde el borde derecho */
+    z-index: 9999 !important;
+    background: white !important;
+    color: #1A1A1A !important;
+    border: 2px solid #903AA8 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  .hero-section .hero-bg,
-  .hero-section .hero-bg::before {
-    position: absolute;
+  /* Menú desplegable */
+  .nav {
+    display: none !important;
+    position: absolute !important;
+    top: 60px !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #F8F5F2 !important;
+    padding: 15px !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    z-index: 9998 !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
   }
 
-  .hero-section .hero-content {
-    width: 100%;
-    max-width: 600px;
-    padding: 0;
+  .nav.mobile-open {
+    display: flex !important;
   }
 
-  .hero-section .hero-title {
-    font-size: 2.2em;
-    line-height: 1.2;
-    white-space: normal;
+  /* Hero responsive */
+  .hero-title-coords,
+  .hero-subtitle-coords {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    white-space: normal !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
   }
 
-  .hero-section .hero-subtitle {
+  .hero-title-coords {
+    font-size: 2em;
+    margin-top: 30vh;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle-coords {
     font-size: 1.1em;
-    white-space: normal;
+    margin: 10px auto 25px;
   }
 
-  .hero-section .hero-cta {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px auto 0;
+  .hero {
+    height: auto;
+    min-height: 70vh;
+    margin-top: 60px;
   }
 
-  .hero-section .hero-cta a {
-    width: 100%;
-    text-align: center;
+  /* Ajustes adicionales */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    padding: 0 15px !important;
+  }
+
+  .newsletter-form {
+    flex-direction: column !important;
+  }
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100% !important;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+
+  .footer-contact,
+  .footer-social {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 10px auto !important;
+  }
+}
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 50px !important; /* ✅ Solución adaptativa */
+    z-index: 9999 !important;
+    background: white !important;
+    color: #1A1A1A !important;
+    border: 2 mim solid #903AA8 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    font-size: 20px !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 }

@@ -10,7 +10,7 @@
 :root {
   --morado: #903AA8;
   --beige: #F8F5F2;
-  --negro: #1A1A1A;
+  --negro: #643a0e;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
   --footer-bg: #3E2723;
@@ -317,6 +317,7 @@ h1, h2, h3, .highlight {
   margin-bottom: 50px;
   padding: 30px;
   box-sizing: border-box;
+  
 }
 
 .service-card-full .service-image {
@@ -604,5 +605,121 @@ h1, h2, h3, .highlight {
   .hero-section .hero-cta a {
     width: 100%;
     text-align: center;
+  }
+}
+/* === Menú móvil accesible === */
+.nav.mobile-open {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: var(--beige);
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 15px;
+  z-index: 999;
+}
+/* === CORRECCIONES MÓVIL - SERVICIOS.HTML (NO TOCA ESCRITORIO) === */
+@media (max-width: 768px) {
+  /* Menú hamburguesa funcional */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--beige);
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+  }
+
+  .nav.mobile-open {
+    display: flex !important;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  /* Hero: convertir a layout centrado en móvil */
+  .hero-title-coords,
+  .hero-subtitle-coords,
+  .hero-btn-coords,
+  .hero-logo-center-coords {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    text-align: center !important;
+    white-space: normal !important;
+    max-width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-logo-center-coords {
+    margin-top: 30vh;
+    margin-bottom: 20px;
+  }
+
+  .hero-title-coords {
+    font-size: 2em;
+    margin: 20px auto;
+  }
+
+  .hero-subtitle-coords {
+    font-size: 1.1em;
+    margin: 10px auto 25px;
+  }
+
+  .hero-btn-coords {
+    margin-top: 20px;
+  }
+
+  .hero-btn-coords .btn-primary {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 1em;
+  }
+
+  /* Tarjetas de servicio: apilar en móvil */
+  .service-card-full {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .service-card-full .service-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .service-card-full .service-image img {
+    position: static;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Footer: apilar columnas */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-contact,
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 }
