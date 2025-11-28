@@ -6,6 +6,10 @@
   <meta name="description" content="Aizen Mystic - Guía espiritual para tu evolución interior. Sanación energética, mentoría y artículos místicos.">
   <title>Aizen Mystic | Transforma tu Energía Interior</title>
 
+  <!-- Preload fuentes críticas -->
+  <link rel="preload" href="fonts/SybillaPro-Book.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/AdobeDevanagari-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
   <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -17,9 +21,9 @@
 </head>
 <body>
 
-  <!-- === PRELOADER CON LOGO GIRANDO === -->
+  <!-- === PRELOADER === -->
   <div id="preloader">
-    <img src="img/logo.png" alt="Logo Aizen Mystic" class="preloader-logo">
+    <img src="img/logof.png" alt="Logo Aizen Mystic" class="preloader-logo">
   </div>
 
   <!-- Header -->
@@ -32,37 +36,37 @@
       <nav class="nav" id="main-nav">
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
-        <a href="tienda.html">Tienda</a>
         <a href="blog.html">Blog</a>
         <a href="sobre-mi.html">Sobre Mí</a>
         <a href="cursos.html">Cursos</a>
         <a href="contacto.html">Contacto</a>
         <div class="nav-actions">
-          <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
+          <!-- Opcional: quitar si no hay i18n real -->
+          <!-- <a href="#" class="lang-switch" aria-label="Cambiar idioma" tabindex="-1">
             <span class="lang-icon">🌐</span>
-          </a>
+          </a> -->
         </div>
       </nav>
-      <div class="mobile-toggle" id="mobile-toggle" aria-expanded="false" role="button" aria-label="Menú móvil">☰</div>
+      <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-label="Menú móvil" aria-controls="main-nav">☰</button>
     </div>
   </header>
 
   <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-bg" style="background-image: url('img/hero-bg.jpg');"></div>
-  <div class="hero-content">
-    <h1 class="hero-title-coords">Transforma tu <span class="highlight">energia</span></h1>
-    <p class="hero-subtitle-coords">
-      Una guía espiritual para almas en búsqueda de sanación y evolución con propósito.
-    </p>
-    <div class="cta-group-coords">
-       <a href="servicios.html" class="btn-primary">Descubre tus servicios</a>
-      <a href="cursos.html" class="btn-secondary">Formacion</a>
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('img/hero-bg.jpg');"></div>
+    <div class="hero-content">
+      <h1 class="hero-title-coords">Transforma tu <span class="highlight">energía</span></h1>
+      <p class="hero-subtitle-coords">
+        Una guía espiritual para almas en búsqueda de sanación y evolución con propósito.
+      </p>
+      <div class="cta-group-coords">
+        <a href="servicios.html" class="btn-primary">Descubre tus servicios</a>
+        <a href="cursos.html" class="btn-secondary">Formación</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Caminos Espirituales (2x2 con imágenes) -->
+  <!-- Caminos Espirituales -->
   <section class="spiritual-paths" style="padding: 80px 0; background: var(--beige);">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">¿Por dónde quieres comenzar?</h2>
@@ -71,10 +75,10 @@
       </p>
 
       <div class="spiritual-paths-grid" data-aos="fade-up" data-aos-delay="300">
-
+        <!-- Tarjetas idénticas al original -->
         <a href="servicios.html" class="path-card">
           <div class="path-card-content">
-            <img src="img/servicio-sanacion.jpg" alt="Sanación Individual" class="path-card-img">
+            <img src="img/servicio-sanacion.jpg" alt="Sanación Individual" class="path-card-img" loading="lazy">
             <div class="path-card-body">
               <h3>Sanación Individual</h3>
               <p>Sesiones personalizadas de lectura akáshica, sanación energética y mentoría.</p>
@@ -82,32 +86,19 @@
             </div>
           </div>
         </a>
-
         <a href="cursos.html" class="path-card">
           <div class="path-card-content">
-            <img src="img/curso-sanacion-grupal.jpg" alt="Cursos Grupales" class="path-card-img">
+            <img src="img/curso-sanacion-grupal.jpg" alt="Cursos Grupales" class="path-card-img" loading="lazy">
             <div class="path-card-body">
-              <h3>Cursos Grupales</h3>
-              <p>Espacios colectivos de meditación, arquetipos y sanación en comunidad.</p>
+              <h3>Cursos, Seminarios y Talleres de Transformación en Conexión</h3>
+              <p>Acompañamiento individual, talleres grupales y seminarios profundos: elige el formato que resuene con tu momento actual</p>
               <span class="btn-small">Ver próximos eventos</span>
             </div>
           </div>
         </a>
-
-        <a href="tienda.html" class="path-card">
-          <div class="path-card-content">
-            <img src="img/producto-amatista.jpg" alt="Tienda Mística" class="path-card-img">
-            <div class="path-card-body">
-              <h3>Tienda Mística</h3>
-              <p>Cristales, amuletos y objetos energéticos para tu altar y tu hogar.</p>
-              <span class="btn-small">Ver artículos</span>
-            </div>
-          </div>
-        </a>
-
         <a href="blog.html" class="path-card">
           <div class="path-card-content">
-            <img src="img/blog-hero.jpg" alt="Sabiduría Espiritual" class="path-card-img">
+            <img src="img/blog-hero.jpg" alt="Sabiduría Espiritual" class="path-card-img" loading="lazy">
             <div class="path-card-body">
               <h3>Sabiduría</h3>
               <p>Artículos, reflexiones y guías espirituales para tu evolución diaria.</p>
@@ -115,7 +106,6 @@
             </div>
           </div>
         </a>
-
       </div>
     </div>
   </section>
@@ -166,18 +156,26 @@
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Voces de Transformación</h2>
       <div class="testimonial-grid" data-aos="fade-up" data-aos-delay="300">
-        <blockquote>
-          "Después de la lectura akáshica, todo encajó. Sentí paz y claridad como nunca."
-          <cite>— María, España</cite>
-        </blockquote>
-        <blockquote>
-          "La sanación energética me liberó de años de carga emocional."
-          <cite>— Carlos, México</cite>
-        </blockquote>
-        <blockquote>
-          "Auristela no solo es guía, es un faro en la niebla."
-          <cite>— Lina, Colombia</cite>
-        </blockquote>
+        <figure>
+          <blockquote>"Llegué a Auristela Izquierdo en el momento más oscuro de mi vida profesional y personal.
+ A mis 35 años, y a pesar de tener una carrera sólida como médico, me encontraba paralizado por una ansiedad severa y atrapado en una relación de pareja con trastorno de personalidad narcisista que había minado completamente mi autoestima.
+A pesar de estar bajo tratamiento psiquiátrico, sentía que giraba en círculos, incapaz de romper el vínculo traumático. Por recomendación de un colega, decidí probar el Coaching Transpersonal con Auristela.
+Auristela fue la pieza que faltaba en mi recuperación. Su acompañamiento fue el catalizador que necesitaba para:
+1.	Entender el abuso narcisista desde una perspectiva que integraba mi mente y mi espíritu.
+2.	Desactivar los detonantes de mi ansiedad desde la consciencia, no solo desde el control.
+3.	Recuperar la autovalía necesaria para poner límites reales.
+Auristela no te dice lo que quieres oír, te guía hacia lo que necesitas ver. Su intervención fue crucial para detenerme antes del colapso total y comenzar a reconstruirme. Altamente recomendada para quienes buscan una transformación profunda y real.
+"</blockquote>
+          <figcaption>— Dr. Jorge Restrepo Medellin Colombia </figcaption>
+        </figure>
+        <figure>
+          <blockquote>"La sanación energética me liberó de años de carga emocional."</blockquote>
+          <figcaption>— Carlos, México</figcaption>
+        </figure>
+        <figure>
+          <blockquote>"Auristela no solo es guía, es un faro en la niebla."</blockquote>
+          <figcaption>— Lina, Colombia</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -188,7 +186,7 @@
       <h2 data-aos="fade-up">Recibe guías espirituales</h2>
       <p data-aos="fade-up" data-aos-delay="100">Únete a nuestra comunidad y recibe contenido exclusivo, meditaciones y invitaciones a talleres.</p>
       <form class="newsletter-form" data-aos="fade-up" data-aos-delay="200">
-        <input type="email" placeholder="Tu correo electrónico" required />
+        <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico" />
         <button type="submit" class="btn-primary">Suscribirme</button>
       </form>
       <p class="small">Prometemos no enviar spam. Solo luz.</p>
@@ -200,19 +198,19 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="img/logo.png" alt="Aizen Mystic" class="footer-logo-img">
+          <img src="img/logo2.png" alt="Aizen Mystic" class="footer-logo-img">
           <p>Transforma tu energía. Evoluciona tu alma.</p>
         </div>
         <div class="footer-contact">
-          <h5>✉️ aurizquierdo21@gmail.com</h5>
-          <h5>📱 <a href="https://wa.me/584244369819" target="_blank">WhatsApp</a></h5>
+          <p>✉️ <a href="mailto:aurizquierdo21@gmail.com">aurizquierdo21@gmail.com</a></p>
+          <p>📱 <a href="https://wa.me/584244369819" target="_blank" rel="noopener">WhatsApp</a></p>
         </div>
         <div class="footer-social">
           <p>Sígueme en:</p>
           <div class="social-links">
-            <a href="#" target="_blank">Instagram</a> •
-            <a href="#" target="_blank">YouTube</a> •
-            <a href="#" target="_blank">TikTok</a>
+            <a href="#" target="_blank" rel="noopener">Instagram</a> •
+            <a href="#" target="_blank" rel="noopener">YouTube</a> •
+            <a href="#" target="_blank" rel="noopener">TikTok</a>
           </div>
         </div>
         <div class="footer-legal">
@@ -224,17 +222,17 @@
   </footer>
 
   <!-- WhatsApp Flotante -->
-  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+  <a href="https://wa.me/58244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">
+  <img src="img/whatsapp-icon.webp" alt="WhatsApp" />
+</a>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Preloader: ocultar cuando termine
+    // Preloader: ocultar con transición suave
     window.addEventListener('load', () => {
       const preloader = document.getElementById('preloader');
-      setTimeout(() => {
-        preloader.style.display = 'none';
-      }, 3500);
+      preloader.classList.add('hidden');
     });
 
     // Inicializar AOS
@@ -244,17 +242,29 @@
     const mobileToggle = document.getElementById('mobile-toggle');
     const mainNav = document.getElementById('main-nav');
 
-    mobileToggle?.addEventListener('click', () => {
-      mainNav.classList.toggle('mobile-open');
-      const isExpanded = mainNav.classList.contains('mobile-open');
-      mobileToggle.setAttribute('aria-expanded', isExpanded);
-    });
+    if (mobileToggle && mainNav) {
+      const closeMenu = () => {
+        mainNav.classList.remove('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      };
 
-    // Cambiar idioma (simbólico)
-    function toggleLang(e) {
-      e.preventDefault();
-      const icon = document.querySelector('.lang-icon');
-      icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
+      mobileToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('mobile-open');
+        const isExpanded = mainNav.classList.contains('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', isExpanded);
+      });
+
+      // Cerrar al hacer clic en enlace
+      document.querySelectorAll('#main-nav a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (!mainNav.contains(e.target) && !mobileToggle.contains(e.target)) {
+          closeMenu();
+        }
+      });
     }
   </script>
 </body>

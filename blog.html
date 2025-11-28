@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Blog espiritual de Aizen Mystic: artículos sobre sanación, energía, tarot, astrología china y transformación interior.">
+  <meta name="description" content="Blog espiritual de Aizen Mystic: artículos sobre sanación, energía, tarot, astrología china, autoconocimiento y transformación interior.">
   <title>Blog Espiritual | Aizen Mystic</title>
 
-  
   <!-- AOS (Animate On Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Estilos -->
-   <link rel="stylesheet" href="css/blog.css" />
+  <link rel="stylesheet" href="css/blog.css" />
 
   <!-- Favicon -->
   <link rel="icon" href="img/favicon.png" type="image/png">
@@ -28,16 +27,11 @@
       <nav class="nav">
         <a href="index.html">Inicio</a>
         <a href="servicios.html">Servicios</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html" class="active">Blog</a>
         <a href="sobre-mi.html">Sobre Mí</a>
-        <a href="cursos.html" class="active">Cursos</a>
+        <a href="cursos.html">Cursos</a>
         <a href="contacto.html">Contacto</a>
         <div class="nav-actions">
-          <a href="tienda.html" class="nav-cart" aria-label="Ver carrito de compras">
-            <span class="nav-cart-icon">🛒</span>
-            <span class="nav-cart-count">0</span>
-          </a>
           <a href="#" class="lang-switch" onclick="toggleLang(event)" aria-label="Cambiar idioma">
             <span class="lang-icon">🌐</span>
           </a>
@@ -48,32 +42,26 @@
   </header>
 
   <!-- Hero del Blog -->
-<section class="hero">
-  <div class="hero-bg" style="background-image: url('img/hero-blog.jpg');"></div>
-  
-  <h1 class="hero-title-coords" style="left: 50%; top: 10%; transform: translateX(-50%);">
-    Reflexiones <span class="highlight">para el Alma</span>
-  </h1>
-  
-  <p class="hero-subtitle-coords" style="left: 25%; top: 82%; transform: translateX(-50%);">
-    Artículos sobre sanación, energía, arquetipos y el camino espiritual.
-  </p>
-  
-  <div class="hero-btn-coords" style="left: 86%; top: 82%; transform: translateX(-50%);">
-    <a href="#articulos" class="btn-primary">Leer artículos</a>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('img/hero-blog.jpg');"></div>
+    <h1 class="hero-title-coords">Reflexiones <span class="highlight">para el Alma</span></h1>
+    <p class="hero-subtitle-coords">Artículos sobre sanación, energía, arquetipos y el camino espiritual.</p>
+    <div class="hero-btn-coords">
+      <a href="#articulos" class="btn-primary">Leer artículos</a>
+    </div>
+  </section>
 
   <!-- Categorías -->
   <section class="blog-filters">
     <div class="container">
       <div class="filters">
-        <a href="#" class="filter-btn active">Todos</a>
-        <a href="#" class="filter-btn">Sanación</a>
-        <a href="#" class="filter-btn">Tarot</a>
-        <a href="#" class="filter-btn">Astrología</a>
-        <a href="#" class="filter-btn">Meditación</a>
-      </div>
+  <a href="#" class="filter-btn active">Todos</a>
+  <a href="#" class="filter-btn">🌿 Autoconocimiento</a>
+  <a href="#" class="filter-btn">🔮 Sanación Energética</a>
+  <a href="#" class="filter-btn">🃏 Tarot y Símbolos</a>
+  <a href="#" class="filter-btn">🌙 Astrología y Destino</a>
+  <a href="#" class="filter-btn">🕊️ Recuperación Emocional</a>
+</div>
     </div>
   </section>
 
@@ -82,71 +70,29 @@
     <div class="container">
       <div class="posts-grid">
         
-        <!-- Artículo 1 -->
-        <article class="post-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="img/post-sanacion.jpg" alt="Cómo sanar bloqueos energéticos" class="post-img">
-          <div class="post-content">
-            <span class="post-category">Sanación</span>
-            <h3>¿Cómo sanar bloqueos energéticos sin salir de casa?</h3>
-            <p>Descubre técnicas simples pero profundas para liberar cargas emocionales y restaurar tu flujo energético desde tu altar personal.</p>
-            <a href="post.html?id=1" class="btn-text">Leer más →</a>
-          </div>
-        </article>
+        <!-- Dentro de .posts-grid en blog.html -->
 
-        <!-- Artículo 2 -->
-        <article class="post-card" data-aos="fade-up" data-aos-delay="300">
-          <img src="img/post-tarot.jpg" alt="Tarot Evolutivo" class="post-img">
-          <div class="post-content">
-            <span class="post-category">Tarot</span>
-            <h3>Tarot Evolutivo: más que predicción, es autoconocimiento</h3>
-            <p>Aprende cómo usar las cartas no para adivinar el futuro, sino para entender tus patrones y tomar decisiones alineadas.</p>
-            <a href="post.html?id=2" class="btn-text">Leer más →</a>
-          </div>
-        </article>
+<!-- Artículo 1: Mindset y Feng Shui -->
+<article class="post-card" data-aos="fade-up" data-aos-delay="200">
+  <img src="img/post-mindset-fengshui.jpg" alt="Mindset y Feng Shui" class="post-img">
+  <div class="post-content">
+    <span class="post-category">🌿 Autoconocimiento</span>
+    <h3>Mindset y Feng Shui: La Armonía Entre tu Mente y tu Espacio</h3>
+    <p>Cómo alinear tu mentalidad y tu entorno físico para crear un ecosistema de crecimiento consciente.</p>
+    <a href="posts/mindset-fengshui.html" class="btn-text">Leer más →</a>
+  </div>
+</article>
 
-        <!-- Artículo 3 -->
-        <article class="post-card" data-aos="fade-up" data-aos-delay="400">
-          <img src="img/post-astrologia.jpg" alt="Astrología China" class="post-img">
-          <div class="post-content">
-            <span class="post-category">Astrología</span>
-            <h3>Los 4 Pilares del Destino: lo que tu nacimiento revela</h3>
-            <p>Una introducción a la astrología china y cómo los pilares de Año, Mes, Día y Hora definen tu energía y propósito.</p>
-            <a href="post.html?id=3" class="btn-text">Leer más →</a>
-          </div>
-        </article>
-
-        <!-- Artículo 4 -->
-        <article class="post-card" data-aos="fade-up" data-aos-delay="500">
-          <img src="img/post-meditacion.jpg" alt="Meditación japonesa" class="post-img">
-          <div class="post-content">
-            <span class="post-category">Meditación</span>
-            <h3>El silencio que transforma: meditación al estilo japonés</h3>
-            <p>Aprende a conectar con tu centro a través del wabi-sabi, el ma (espacio vacío) y la atención plena sin esfuerzo.</p>
-            <a href="post.html?id=4" class="btn-text">Leer más →</a>
-          </div>
-        </article>
-
-        <!-- Artículo 5 -->
-        <article class="post-card" data-aos="fade-up" data-aos-delay="600">
-          <img src="img/post-arquetipos.jpg" alt="Arquetipos de Jung" class="post-img">
-          <div class="post-content">
-            <span class="post-category">Autoconocimiento</span>
-            <h3>¿Qué arquetipo rige tu vida? Descúbrelo aquí</h3>
-            <p>El Héroe, el Sabio, el Amante… identifica los arquetipos que dominan tu inconsciente y aprende a integrarlos.</p>
-            <a href="post.html?id=5" class="btn-text">Leer más →</a>
-          </div>
-        </article>
-
-        <!-- Artículo 6 -->
-        <article class="post-card" data-aos="fade-up" data-aos-delay="700">
-          <img src="img/post-relaciones.jpg" alt="Relaciones sanas" class="post-img">
-          <div class="post-content">
-            <span class="post-category">Relaciones</span>
-            <h3>Comunicación asertiva: cómo hablar desde el poder, no desde el miedo</h3>
-            <p>Herramientas prácticas para fortalecer tus vínculos sin perder tu esencia.</p>
-            <a href="post.html?id=6" class="btn-text">Leer más →</a>
-          </div>
-        </article>
+<!-- Artículo 2: Abuso Narcisista -->
+<article class="post-card" data-aos="fade-up" data-aos-delay="300">
+  <img src="img/post-abuso-narcisista.jpg" alt="Abuso Narcisista y Recuperación" class="post-img">
+  <div class="post-content">
+    <span class="post-category">🕊️ Recuperación Emocional</span>
+    <h3>El Abuso Narcisista y el Camino hacia la Soberanía Emocional</h3>
+    <p>Por Auristela Izquierdo: señales, ciclo de manipulación y cómo sanar desde una mirada transpersonal.</p>
+    <a href="posts/abuso-narcisista.html" class="btn-text">Leer más →</a>
+  </div>
+</article>
 
       </div>
     </div>
@@ -194,23 +140,36 @@
   </footer>
 
   <!-- WhatsApp Flotante -->
-  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left" data-aos-delay="1000">💬</a>
+  <a href="https://wa.me/584244369819" class="whatsapp-btn" target="_blank" data-aos="fade-left">💬</a>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+    // Menú móvil
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    if (mobileToggle && nav) {
+      mobileToggle.addEventListener('click', () => {
+        nav.classList.toggle('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', nav.classList.contains('mobile-open'));
+      });
+      document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('mobile-open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
 
-    document.querySelector('.mobile-toggle')?.addEventListener('click', () => {
-      const nav = document.querySelector('.nav');
-      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
-    });
-
+    // Cambio de idioma
     function toggleLang(e) {
       e.preventDefault();
       const icon = document.querySelector('.lang-icon');
       icon.textContent = icon.textContent === '🌐' ? '🌎' : '🌐';
     }
+
+    // Iniciar AOS
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
   </script>
 </body>
 </html>
