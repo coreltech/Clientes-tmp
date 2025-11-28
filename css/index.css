@@ -658,3 +658,52 @@ blockquote {
   height: auto;
   display: block;
 }
+/* === TESTIMONIOS === */
+.testimonials {
+  padding: 80px 0;
+  background: var(--beige);
+}
+
+/* Tarjeta base para todos los testimonios */
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  font-family: var(--font-sybilla);
+  color: var(--gris-oscuro);
+  line-height: 1.7;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.05em;
+  margin: 0;
+  font-style: italic;
+  white-space: pre-line; /* respeta saltos de línea sin <br> */
+}
+
+.testimonial-author {
+  display: block;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: var(--morado);
+  font-family: var(--font-devanagari);
+  font-size: 1.1em;
+  text-align: right;
+}
+
+/* Grid para los testimonios cortos */
+.testimonial-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+/* En móviles, apilan */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
