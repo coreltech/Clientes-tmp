@@ -106,7 +106,7 @@ h1, h2, h3, .highlight {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 80px;
   padding: 0 15px;
 }
 
@@ -118,7 +118,7 @@ h1, h2, h3, .highlight {
 }
 
 .logo-img {
-  height: 60px;
+  height: 70px;
   transition: transform 0.3s ease;
 }
 
@@ -519,7 +519,7 @@ blockquote {
 }
 
 .footer-logo-img {
-  height: 40px;
+  height: 80px;
   opacity: 0.95;
 }
 
