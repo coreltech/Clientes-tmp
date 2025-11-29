@@ -1,0 +1,741 @@
+/* =================================================================== */
+/* === INDEX.CSS - ESTILOS EXCLUSIVOS DE index.html ================== */
+/* Proyecto: Aizen Mystic                                              */
+/* Página: index.html                                                  */
+/* Fecha: 10 de septiembre de 2025                                     */
+/* Versión: Modular, limpia, sin conflictos                            */
+/* =================================================================== */
+
+/* === 1. VARIABLES Y TIPOGRAFÍA ====================================== */
+:root {
+  --morado: #903AA8;
+  --beige: #F8F5F2;
+  --negro: #1A1A1A;
+  --gris-oscuro: #5D4037;
+  --gris-medio: #E6D5C3;
+  --footer-bg: #3E2723; /* nuevo color de footer */
+  --font-devanagari: 'Adobe Devanagari', serif;
+  --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
+}
+
+@font-face {
+  font-family: 'Adobe Devanagari';
+  src: url('fonts/AdobeDevanagari-Regular.woff2') format('woff2'),
+       url('fonts/AdobeDevanagari-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SybillaPro-Book';
+  src: url('fonts/SybillaPro-Book.woff2') format('woff2'),
+       url('fonts/SybillaPro-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-sybilla);
+  color: #1A1A1A;
+  background: var(--beige);
+  line-height: 1.7;
+}
+
+h1, h2, h3, .highlight {
+  font-family: var(--font-devanagari);
+}
+
+/* === 2. PRELOADER =================================================== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    #1A1A1A 0%,
+    #3A2A4A 20%,
+    #7A3A8A 40%,
+    #D4A52A 70%,
+    var(--beige) 100%
+  );
+  background-size: 100% 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease-out 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+#preloader .preloader-logo {
+  width: 60px;
+  opacity: 0;
+  transform: scale(0.8);
+  border-radius: 8px;
+  padding: 12px;
+  animation: fadeIn 1s ease-out 0.5s forwards, spin 4s linear 1.3s infinite;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === 3. HEADER ===================================================== */
+.header {
+  background-color: var(--beige);
+  border-bottom: 1px solid var(--gris-medio);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 15px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--negro);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.logo:hover .logo-text {
+  color: var(--morado);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+}
+
+.nav a {
+  font-size: 1.05em;
+  color: var(--negro);
+  text-decoration: none;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--morado);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--negro);
+}
+
+/* Menú móvil accesible */
+.nav.mobile-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: var(--beige);
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  gap: 15px;
+  z-index: 999;
+}
+
+/* === 4. HERO CON CONTROL DE COORDENADAS (X, Y) ======================= */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(144, 58, 168, 0.2), rgba(0,0,0,0.6));
+  z-index: -1;
+}
+
+.hero-title-coords {
+  position: absolute;
+  color: white;
+  font-size: 3.5em;
+  font-family: var(--font-devanagari);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+  z-index: 2;
+  max-width: 90%;
+  text-align: center;
+  left: 70%;
+  top: 5%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-subtitle-coords {
+  position: absolute;
+  color: var(--gris-medio);
+  font-size: 1.2em;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.7);
+  z-index: 2;
+  left: 26%;
+  top: 81%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  max-width: 85%;
+  overflow: visible;
+  text-align: center;
+}
+
+.cta-group-coords {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  gap: 15px;
+  left: 80%;
+  top: 80%;
+  transform: translateX(-50%);
+}
+
+.cta-group-coords .btn-primary,
+.cta-group-coords .btn-secondary {
+  white-space: nowrap;
+}
+
+/* === 5. CAMINOS ESPIRITUALES (2x2) ================================= */
+.spiritual-paths-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 20px auto 50px;
+  color: var(--gris-oscuro);
+  font-size: 1.1em;
+}
+
+.spiritual-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.path-card-content {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.path-card-content:hover {
+  transform: translateY(-5px);
+}
+
+.path-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.path-card-body {
+  padding: 25px;
+  text-align: center;
+}
+
+.path-card-body h3 {
+  color: var(--morado);
+  margin-bottom: 10px;
+}
+
+.path-card-body p {
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* === 6. SECCIONES COMUNES ========================================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-size: 2.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--negro);
+}
+
+.intro-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+blockquote {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.newsletter {
+  padding: 60px 0;
+  background: var(--beige);
+  text-align: center;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 12px 20px;
+  width: 300px;
+  border: none;
+  border-radius: 30px;
+}
+
+/* === 7. BOTONES ==================================================== */
+
+/* Estilo base para todos los botones */
+.btn-primary,
+.btn-secondary,
+.btn-outline,
+.btn-text,
+.btn-small,
+.btn-small:link,
+.btn-small:visited,
+.btn-small:hover,
+.btn-small:active {
+  text-decoration: none !important;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--morado);
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #7a2f8d;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(144, 58, 168, 0.2);
+  color: white;
+  border: 2px solid var(--morado);
+  backdrop-filter: blur(4px);
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(144, 58, 168, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(144, 58, 168, 0.3);
+}
+
+.btn-small {
+  display: block;
+  margin: 0 auto 15px;
+  padding: 10px 20px;
+  background: var(--morado);
+  color: white;
+  text-decoration: none;
+  font-size: 0.95em;
+  border-radius: 25px;
+  transition: background 0.3s, transform 0.2s;
+  width: fit-content;
+  font-weight: 600;
+}
+
+.btn-small:hover {
+  background: #7a2f8d;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--negro);
+  border: 2px solid var(--negro);
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: var(--negro);
+  color: white;
+}
+
+.btn-text {
+  color: var(--morado);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* === 8. FOOTER ===================================================== */
+.footer {
+  background: var(--footer-bg);
+  color: var(--beige);
+  padding: 30px 0 15px;
+  font-size: 0.85em;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo-img {
+  height: 40px;
+  opacity: 0.95;
+}
+
+.footer-contact a,
+.social-links a,
+.footer-legal a {
+  color: var(--morado);
+  text-decoration: none;
+}
+
+/* === 9. WHATSAPP Y OTROS =========================================== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.whatsapp-btn img {
+  width: 32px;
+  height: auto;
+  display: block;
+}
+
+/* === 10. RESPONSIVE (móviles) ====================================== */
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .mobile-toggle { display: block; }
+
+  .hero-title-coords {
+    font-size: 2.2em;
+    max-width: 95%;
+    white-space: normal;
+    line-height: 1.2;
+    padding: 0 10px;
+    left: 50%;
+    top: 38%;
+  }
+
+  .hero-subtitle-coords {
+    font-size: 1em;
+    max-width: 95%;
+    white-space: normal;
+    left: 50%;
+    top: 52%;
+  }
+
+  .cta-group-coords {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    left: 50%;
+    top: 62%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-contact,
+  .footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* === HERO: versión móvil con flexbox === */
+@media (max-width: 768px) {
+  .hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 60px;
+  }
+
+  .hero-bg {
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .hero-title-coords,
+  .hero-subtitle-coords,
+  .cta-group-coords {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    white-space: normal;
+    margin: 0 auto 20px;
+  }
+
+  .hero-title-coords {
+    font-size: 2.2em;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  }
+
+  .hero-subtitle-coords {
+    font-size: 1.1em;
+    color: var(--gris-medio);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    margin-bottom: 25px;
+  }
+
+  .cta-group-coords {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* === TESTIMONIOS === */
+.testimonials {
+  padding: 80px 0;
+  background: var(--beige);
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+  font-family: var(--font-sybilla);
+  color: var(--gris-oscuro);
+  line-height: 1.7;
+}
+
+.testimonial-card blockquote {
+  font-size: 1.05em;
+  margin: 0;
+  font-style: italic;
+  white-space: pre-line;
+}
+
+.testimonial-author {
+  display: block;
+  margin-top: 1.2rem;
+  font-weight: 600;
+  color: var(--morado);
+  font-family: var(--font-devanagari);
+  font-size: 1.1em;
+  text-align: right;
+}
+
+.testimonial-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+}
+/* Elimina cualquier posible subrayado o línea en los títulos de Caminos Espirituales */
+.spiritual-paths .path-card h3 {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  position: relative;
+}
+
+/* Asegura que el contenedor del enlace no active pseudo-elementos */
+.spiritual-paths .path-card {
+  text-decoration: none !important;
+  position: relative;
+}
+
+.spiritual-paths .path-card::after {
+  display: none !important;
+}
