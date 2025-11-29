@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- ✅ METADATOS SEO OPTIMIZADOS -->
+  <title>Blog Espiritual | Aizen Mystic - Artículos sobre Sanación, Energía y Transformación Interior</title>
+  <meta name="description" content="✨ Blog espiritual de Aizen Mystic con artículos sobre sanación energética, tarot, astrología china, autoconocimiento y transformación personal. Guías prácticas para tu crecimiento espiritual.">
+  <meta name="keywords" content="blog espiritual, sanación energética, tarot evolutivo, astrología china, autoconocimiento, crecimiento personal, Auristela Izquierdo, Aizen Mystic">
+  
+  <!-- ✅ GOOGLE ANALYTICS 4 -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3YFP0FDGB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y3YFP0FDGB');
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aizenmystic.com/blog.html">
+  <meta property="og:title" content="Blog Espiritual | Aizen Mystic - Sanación y Transformación">
+  <meta property="og:description" content="Artículos sobre sanación energética, tarot, autoconocimiento y crecimiento espiritual. Guías prácticas para tu evolución personal.">
+  <meta property="og:image" content="https://aizenmystic.com/img/og-blog.jpg">
+  <meta property="og:image:alt" content="Blog espiritual de Aizen Mystic sobre sanación y transformación personal">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aizenmystic.com/blog.html">
+  <meta property="twitter:title" content="Blog Espiritual | Aizen Mystic">
+  <meta property="twitter:description" content="Artículos sobre sanación energética, tarot y crecimiento personal. Guías espirituales para tu transformación.">
+  <meta property="twitter:image" content="https://aizenmystic.com/img/twitter-blog.jpg">
+  
+  <!-- Schema.org markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Espiritual - Aizen Mystic",
+    "description": "Blog especializado en sanación energética, crecimiento personal y desarrollo espiritual",
+    "url": "https://aizenmystic.com/blog.html",
+    "publisher": {
+      "@type": "Person",
+      "name": "Auristela Izquierdo",
+      "alternateName": "Aizen Mystic",
+      "knowsAbout": [
+        "Sanación Energética",
+        "Tarot Evolutivo",
+        "Astrología China",
+        "Autoconocimiento",
+        "Crecimiento Espiritual",
+        "Recuperación Emocional"
+      ]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aizenmystic.com/blog.html"
+    }
+  }
+  </script>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://aizenmystic.com/blog.html" />
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/blog.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  
+  <!-- Preload de imágenes críticas -->
+  <link rel="preload" href="img/hero-blog.jpg" as="image" media="(min-width: 768px)">
+  <link rel="preload" href="img/logo.png" as="image">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Aizen Mystic - Inicio">
+        <img src="img/logo.png" alt="Logo Aizen Mystic - Blog espiritual sobre sanación y crecimiento personal" class="logo-img" width="60" height="60">
+        <span class="logo-text">AIZEN MYSTIC</span>
+      </a>
+      <nav class="nav" id="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="programa-vip.html">Programa VIP</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="sobre-mi.html">Sobre Mí</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="mobile-toggle" aria-expanded="false" role="button" aria-label="Menú móvil">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero del Blog -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" style="background-image: url('img/hero-blog.jpg');" role="img" aria-label="Entorno espiritual para lectura y reflexión"></div>
+    <h1 id="hero-title" class="hero-title-coords">Reflexiones <span class="highlight">para el Alma</span></h1>
+    <p class="hero-subtitle-coords">Artículos profundos sobre sanación energética, autoconocimiento, tarot y tu camino espiritual de transformación.</p>
+    <div class="hero-btn-coords">
+      <a href="#articulos" class="btn-primary" id="cta-hero-blog">Explorar artículos</a>
+    </div>
+  </section>
+
+  <!-- Categorías -->
+  <section class="blog-filters" aria-labelledby="filters-title">
+    <div class="container">
+      <h2 id="filters-title" class="sr-only">Categorías del Blog</h2>
+      <div class="filters">
+        <a href="#" class="filter-btn active" data-category="todos">Todos los artículos</a>
+        <a href="#" class="filter-btn" data-category="autoconocimiento">🌿 Autoconocimiento</a>
+        <a href="#" class="filter-btn" data-category="sanacion">🔮 Sanación Energética</a>
+        <a href="#" class="filter-btn" data-category="tarot">🃏 Tarot y Símbolos</a>
+        <a href="#" class="filter-btn" data-category="astrologia">🌙 Astrología y Destino</a>
+        <a href="#" class="filter-btn" data-category="recuperacion">🕊️ Recuperación Emocional</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artículos del Blog -->
+  <section class="blog-posts" id="articulos" aria-labelledby="posts-title">
+    <div class="container">
+      <h2 id="posts-title" class="sr-only">Artículos del Blog Espiritual</h2>
+      <div class="posts-grid">
+        
+        <!-- Artículo 1: Mindset y Feng Shui -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="200" itemscope itemtype="https://schema.org/BlogPosting">
+          <div class="post-image">
+            <img src="img/post-mindset-fengshui.jpg" alt="Mindset y Feng Shui - Armonía entre mente y espacio para crecimiento consciente" class="post-img" width="400" height="250" itemprop="image">
+          </div>
+          <div class="post-content">
+            <span class="post-category" itemprop="articleSection">🌿 Autoconocimiento</span>
+            <h3 itemprop="headline">Mindset y Feng Shui: La Armonía Entre tu Mente y tu Espacio</h3>
+            <p itemprop="description">Cómo alinear tu mentalidad y tu entorno físico para crear un ecosistema de crecimiento consciente y transformación personal.</p>
+            <div class="post-meta">
+              <time datetime="2025-01-15" itemprop="datePublished">15 Enero, 2025</time>
+              <span class="read-time" itemprop="timeRequired">5 min lectura</span>
+            </div>
+            <a href="posts/mindset-fengshui.html" class="btn-text" itemprop="url" data-article="mindset-fengshui">
+              Leer artículo completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artículo 2: Abuso Narcisista -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="300" itemscope itemtype="https://schema.org/BlogPosting">
+          <div class="post-image">
+            <img src="img/post-abuso-narcisista.jpg" alt="Abuso Narcisista y Recuperación - Camino hacia la soberanía emocional" class="post-img" width="400" height="250" itemprop="image">
+          </div>
+          <div class="post-content">
+            <span class="post-category" itemprop="articleSection">🕊️ Recuperación Emocional</span>
+            <h3 itemprop="headline">El Abuso Narcisista y el Camino hacia la Soberanía Emocional</h3>
+            <p itemprop="description">Por Auristela Izquierdo: señales, ciclo de manipulación y cómo sanar desde una mirada transpersonal y espiritual.</p>
+            <div class="post-meta">
+              <time datetime="2025-01-10" itemprop="datePublished">10 Enero, 2025</time>
+              <span class="read-time" itemprop="timeRequired">7 min lectura</span>
+            </div>
+            <a href="posts/abuso-narcisista.html" class="btn-text" itemprop="url" data-article="abuso-narcisista">
+              Leer artículo completo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Artículo 3: Tarot Evolutivo (Ejemplo de artículo futuro) -->
+        <article class="post-card" data-aos="fade-up" data-aos-delay="400" itemscope itemtype="https://schema.org/BlogPosting">
+          <div class="post-image">
+            <img src="img/post-tarot-evolutivo.jpg" alt="Tarot Evolutivo - Herramienta de autoconocimiento y crecimiento personal" class="post-img" width="400" height="250" itemprop="image">
+          </div>
+          <div class="post-content">
+            <span class="post-category" itemprop="articleSection">🃏 Tarot y Símbolos</span>
+            <h3 itemprop="headline">Tarot Evolutivo: Más que Adivinación, una Herramienta de Autoconocimiento</h3>
+            <p itemprop="description">Descubre cómo el tarot puede ser tu aliado en el camino del autoconocimiento y la transformación personal consciente.</p>
+            <div class="post-meta">
+              <time datetime="2025-01-05" itemprop="datePublished">5 Enero, 2025</time>
+              <span class="read-time" itemprop="timeRequired">6 min lectura</span>
+            </div>
+            <a href="posts/tarot-evolutivo.html" class="btn-text" itemprop="url" data-article="tarot-evolutivo">
+              Leer artículo completo →
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Paginación -->
+      <div class="blog-pagination" data-aos="fade-up">
+        <span class="page-info">Mostrando 3 de 12 artículos</span>
+        <div class="pagination-controls">
+          <button class="pagination-btn disabled" aria-label="Página anterior">← Anterior</button>
+          <span class="page-current">Página 1</span>
+          <button class="pagination-btn" aria-label="Página siguiente">Siguiente →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de Destacados -->
+  <section class="blog-highlights" aria-labelledby="highlights-title">
+    <div class="container">
+      <h2 id="highlights-title">Artículos Más Populares</h2>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <h3>🌟 Lo Más Leído</h3>
+          <a href="posts/abuso-narcisista.html" class="highlight-link">El Abuso Narcisista y la Recuperación Emocional</a>
+          <span class="highlight-views">+500 lecturas</span>
+        </div>
+        <div class="highlight-card">
+          <h3>📈 En Tendencia</h3>
+          <a href="posts/mindset-fengshui.html" class="highlight-link">Mindset y Feng Shui: Armonía Mental y Espacial</a>
+          <span class="highlight-views">+300 lecturas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter" aria-labelledby="newsletter-title">
+    <div class="container">
+      <h2 id="newsletter-title">Recibe Guías Espirituales Exclusivas</h2>
+      <p>Únete a nuestra comunidad y recibe contenido exclusivo, meditaciones guiadas, artículos premium e invitaciones a talleres gratuitos.</p>
+      <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/xwpdypap" method="POST">
+        <label for="newsletter-email" class="sr-only">Tu correo electrónico</label>
+        <input type="email" id="newsletter-email" name="email" placeholder="Tu correo electrónico" required aria-required="true" />
+        <input type="hidden" name="_subject" value="Nueva suscripción al newsletter del blog - Aizen Mystic">
+        <button type="submit" class="btn-primary" aria-label="Suscribirme al newsletter espiritual">
+          Suscribirme al Blog
+        </button>
+      </form>
+      <p class="small">Prometemos no enviar spam. Solo contenido de valor y luz para tu camino espiritual.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo2.png" alt="Aizen Mystic - Transforma tu energía, evoluciona tu alma" class="footer-logo-img" width="80" height="80">
+          <p>Transforma tu energía. Evoluciona tu alma.</p>
+        </div>
+        <div class="footer-contact">
+          <h3>Contacto Editorial</h3>
+          <p>✉️ <a href="mailto:aizenmysticweb@gmail.com">aizenmysticweb@gmail.com</a></p>
+          <p>📱 <a href="https://wa.me/584244369819" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Sígueme en</h3>
+          <div class="social-links">
+            <a href="https://instagram.com/aizenmystic" target="_blank" rel="noopener noreferrer" aria-label="Sígueme en Instagram">Instagram</a> •
+            <a href="https://youtube.com/@aizenmystic" target="_blank" rel="noopener noreferrer" aria-label="Suscríbete a mi YouTube">YouTube</a> •
+            <a href="https://tiktok.com/@aizenmystic" target="_blank" rel="noopener noreferrer" aria-label="Sígueme en TikTok">TikTok</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 Aizen Mystic. Todos los derechos reservados.</p>
+          <p><a href="politica-privacidad.html">Política de privacidad</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/584244369819?text=Hola%20Aizen%20Mystic,%20me%20encanta%20tu%20blog%20espiritual%20y%20quiero%20saber%20más%20sobre%20tus%20servicios" 
+     class="whatsapp-btn" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     data-aos="fade-left" 
+     data-aos-delay="1000"
+     aria-label="Contactar por WhatsApp desde el blog espiritual"
+     id="whatsapp-blog">
+    <img src="img/whatsapp-icon.webp" alt="Contactar por WhatsApp para consultas sobre artículos espirituales" width="50" height="50" />
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Menú móvil
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const nav = document.querySelector('.nav');
+    if (mobileToggle && nav) {
+      mobileToggle.addEventListener('click', () => {
+        nav.classList.toggle('mobile-open');
+        mobileToggle.setAttribute('aria-expanded', nav.classList.contains('mobile-open'));
+      });
+      document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('mobile-open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // Iniciar AOS
+    AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+
+    // ✅ EVENTOS DE CONVERSIÓN PARA GOOGLE ANALYTICS - BLOG
+    // Trackear clicks en artículos del blog
+    document.querySelectorAll('a[data-article]').forEach(link => {
+      link.addEventListener('click', function() {
+        const article = this.getAttribute('data-article');
+        gtag('event', 'click_articulo_blog', {
+          'event_category': 'engagement_blog',
+          'event_label': article,
+          'value': 1
+        });
+      });
+    });
+
+    // Trackear filtros de categorías
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const category = this.getAttribute('data-category');
+        gtag('event', 'filter_categoria_blog', {
+          'event_category': 'engagement_blog',
+          'event_label': category
+        });
+        
+        // Actualizar clase activa
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Trackear suscripción al newsletter del blog
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        gtag('event', 'suscripcion_newsletter_blog', {
+          'event_category': 'conversion_blog',
+          'event_label': 'newsletter_desde_blog'
+        });
+        
+        alert('¡Gracias por suscribirte al blog! Recibirás contenido espiritual exclusivo en tu correo.');
+        this.reset();
+      });
+    }
+
+    // Trackear clicks en CTA hero del blog
+    document.getElementById('cta-hero-blog')?.addEventListener('click', function() {
+      gtag('event', 'click_cta_hero_blog', {
+        'event_category': 'engagement_blog',
+        'event_label': 'hero_blog'
+      });
+    });
+
+    // Trackear clicks en WhatsApp desde blog
+    document.getElementById('whatsapp-blog')?.addEventListener('click', function() {
+      gtag('event', 'click_whatsapp_blog', {
+        'event_category': 'conversion_blog',
+        'event_label': 'whatsapp_desde_blog'
+      });
+    });
+
+    // Trackear scroll en artículos (engagement)
+    const articlesObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const article = entry.target.querySelector('[data-article]')?.getAttribute('data-article');
+          if (article) {
+            gtag('event', 'view_articulo_blog', {
+              'event_category': 'engagement_blog',
+              'event_label': article
+            });
+          }
+          articlesObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('.post-card').forEach(article => {
+      articlesObserver.observe(article);
+    });
+
+    // Trackear tiempo en página del blog
+    let blogTimeStart = Date.now();
+    window.addEventListener('beforeunload', function() {
+      const timeSpent = Math.round((Date.now() - blogTimeStart) / 1000);
+      if (timeSpent > 60) { // Solo registrar si pasó más de 60 segundos
+        gtag('event', 'time_spent_blog', {
+          'event_category': 'engagement_blog',
+          'event_label': 'tiempo_en_blog',
+          'value': timeSpent
+        });
+      }
+    });
+  </script>
+
+  <style>
+    .post-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0;
+      font-size: 0.85em;
+      color: var(--gris-medio);
+    }
+    .read-time {
+      background: var(--beige);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.8em;
+    }
+    .blog-pagination {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--gris-claro);
+    }
+    .pagination-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .pagination-btn {
+      background: var(--morado);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .pagination-btn:hover:not(.disabled) {
+      background: var(--morado-oscuro);
+    }
+    .pagination-btn.disabled {
+      background: var(--gris-claro);
+      cursor: not-allowed;
+    }
+    .blog-highlights {
+      background: var(--beige);
+      padding: 3rem 0;
+      margin-top: 2rem;
+    }
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .highlight-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .highlight-card h3 {
+      color: var(--morado);
+      margin-bottom: 0.8rem;
+      font-size: 1.1em;
+    }
+    .highlight-link {
+      color: var(--negro);
+      text-decoration: none;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease;
+    }
+    .highlight-link:hover {
+      color: var(--morado);
+    }
+    .highlight-views {
+      color: var(--gris-medio);
+      font-size: 0.85em;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (max-width: 768px) {
+      .blog-pagination {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</body>
+</html>
