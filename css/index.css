@@ -118,7 +118,8 @@ h1, h2, h3, .highlight {
 }
 
 .logo-img {
-  height: 70px;
+  height: 60px;
+  width: auto; /* ← Esto mantiene la proporción */
   transition: transform 0.3s ease;
 }
 
@@ -519,8 +520,9 @@ blockquote {
 }
 
 .footer-logo-img {
-  height: 80px;
-  opacity: 0.95;
+  height: 60px;
+  width: auto; /* ← Esto mantiene la proporción */
+  transition: transform 0.3s ease;
 }
 
 .footer-contact a,
