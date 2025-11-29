@@ -246,7 +246,7 @@ h1, h2, h3, .highlight {
   font-size: 1.2em;
   text-shadow: 0 1px 5px rgba(0,0,0,0.7);
   z-index: 2;
-  left: 26%;
+  left: 30%;
   top: 81%;
   transform: translateX(-50%);
   margin: 0;

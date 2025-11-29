@@ -747,3 +747,184 @@ h1, h2, h3, .highlight {
   height: auto;
   display: block;
 }
+/* AGREGAR ESTOS ESTILOS AL FINAL DE TU CSS ACTUAL */
+
+/* Mejora para la sección de coaching transpersonal - Manteniendo coherencia */
+.service-highlight-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 60px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.service-highlight-content {
+    padding-right: 20px;
+}
+
+.service-highlight-image {
+  width: 100%;
+  max-width: 400px; /* ← Ajusta este valor para controlar el tamaño máximo */
+  aspect-ratio: 1 / 1; /* ← Esto fuerza el cuadrado */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-highlight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ← Recorta la imagen manteniendo proporción */
+  transition: transform 0.5s ease;
+}
+
+.service-highlight-card:hover .service-highlight-image img {
+  transform: scale(1.03);
+}
+
+.service-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.service-highlight-features {
+    margin: 25px 0;
+    display: grid;
+    gap: 12px;
+}
+
+.service-highlight-features div {
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.service-highlight-features div:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateX(5px);
+}
+
+/* Hacer que el botón sea consistente con otros servicios */
+.service-highlight-content .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.service-highlight-content .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-highlight-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 25px;
+        margin: 40px 0;
+    }
+    
+    .service-highlight-content {
+        padding-right: 0;
+    }
+    
+    .service-highlight-image {
+        order: -1;
+    }
+}
+
+/* Asegurar coherencia con las otras secciones de servicios */
+.services-grid-container {
+    margin: 40px 0;
+}
+
+.service-card-full {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.service-card-full:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+/* CAMBIO COMPLETO DE LA PALETA EN COACHING TRANSPERSONAL */
+.service-highlight-card .service-badge {
+    background: #903AA8 !important;
+    background: linear-gradient(135deg, #903AA8 0%, #7a2d8f 100%) !important;
+}
+
+.service-highlight-card .service-highlight-features div {
+    border-left: 4px solid #903AA8;
+}
+
+.service-highlight-card .btn-primary {
+    background: #903AA8 !important;
+    background: linear-gradient(135deg, #903AA8 0%, #7a2d8f 100%) !important;
+    box-shadow: 0 4px 15px rgba(144, 58, 168, 0.3);
+}
+
+.service-highlight-card .btn-primary:hover {
+    background: #7a2d8f !important;
+    background: linear-gradient(135deg, #7a2d8f 0%, #652277 100%) !important;
+    box-shadow: 0 8px 25px rgba(144, 58, 168, 0.4);
+}
+/* Asegura que la imagen cuadrada se centre en todos los tamaños */
+.service-highlight-image {
+  width: 100%;
+  max-width: 500px; /* o el tamaño que definas */
+  aspect-ratio: 1 / 1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  margin: 0 auto; /* ← Centra horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* En móviles, cuando la imagen va arriba del texto */
+@media (max-width: 768px) {
+  .service-highlight-card {
+    text-align: center;
+  }
+
+  .service-highlight-content {
+    padding-right: 0;
+  }
+
+  .service-highlight-image {
+    max-width: 280px;
+    margin: 0 auto 30px auto; /* margen inferior para separar del texto */
+  }
+
+  .service-highlight-features {
+    text-align: left; /* o 'center' si prefieres */
+  }
+}
