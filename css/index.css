@@ -9,11 +9,12 @@
 /* === 1. VARIABLES Y TIPOGRAFÍA ====================================== */
 :root {
   --morado: #903AA8;
+  --blanco: #ffffff;
   --beige: #F8F5F2;
   --negro: #1A1A1A;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
-  --footer-bg: #3E2723; /* nuevo color de footer */
+  --footer-bg: #b877c9; /* nuevo color de footer */
   --font-devanagari: 'Adobe Devanagari', serif;
   --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
 }
@@ -232,7 +233,7 @@ h1, h2, h3, .highlight {
   z-index: 2;
   max-width: 90%;
   text-align: center;
-  left: 70%;
+  left: 75%;
   top: 5%;
   transform: translateX(-50%);
   margin: 0;
@@ -482,7 +483,7 @@ blockquote {
 
 .btn-outline {
   background: transparent;
-  color: var(--negro);
+  color: var(--morado);
   border: 2px solid var(--negro);
   padding: 12px 28px;
   text-decoration: none;
@@ -493,7 +494,7 @@ blockquote {
 }
 
 .btn-outline:hover {
-  background: var(--negro);
+  background: var(--morado);
   color: white;
 }
 
@@ -528,7 +529,7 @@ blockquote {
 .footer-contact a,
 .social-links a,
 .footer-legal a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 
@@ -740,4 +741,13 @@ blockquote {
 
 .spiritual-paths .path-card::after {
   display: none !important;
+}
+/* Compactar líneas en testimonios */
+.testimonial-card blockquote {
+  line-height: 1;        /* Altura de línea más compacta */
+  margin-bottom: 0.8em;    /* Espacio entre párrafos reducido */
+}
+
+.testimonial-card blockquote p {
+  margin: 0 0 0.8em 0;     /* Elimina márgenes por defecto y controla el espaciamiento */
 }

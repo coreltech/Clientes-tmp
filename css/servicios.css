@@ -8,12 +8,13 @@
 
 /* === 1. VARIABLES Y TIPOGRAFÍA ====================================== */
 :root {
+  --blanco: #ffffff;
   --morado: #903AA8;
   --beige: #F8F5F2;
   --negro: #643a0e;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
-  --footer-bg: #3E2723;
+  --footer-bg: #b877c9;
   --font-devanagari: 'Adobe Devanagari', serif;
   --font-sybilla: 'SybillaPro-Book', 'Playfair Display', serif;
 }
@@ -442,7 +443,7 @@ h1, h2, h3, .highlight {
 .footer-contact a,
 .social-links a,
 .footer-legal a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 

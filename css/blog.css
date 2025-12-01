@@ -8,9 +8,11 @@
 
 /* === 1. VARIABLES Y TIPOGRAFÍA ====================================== */
 :root {
+  --footer-bg: #b877c9; /* nuevo color de footer */
+  --blanco: #ffffff;
   --morado: #903AA8;
   --beige: #F8F5F2;
-  --negro: #3E2723;
+  --negro: #000000;
   --gris-oscuro: #5D4037;
   --gris-medio: #E6D5C3;
   --font-devanagari: 'Adobe Devanagari', serif;
@@ -398,8 +400,8 @@ h1, h2, h3, .highlight {
 }
 /* === 8. FOOTER ===================================================== */
 .footer {
-  background: var(--negro);
-  color: var(--beige);
+  background: var(--footer-bg);
+  color: var(--blanco);
   padding: 30px 0 15px;
   font-size: 0.85em;
 }
@@ -419,17 +421,17 @@ h1, h2, h3, .highlight {
 }
 
 .footer-contact a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 
 .social-links a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 
 .footer-legal a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 /* === 10. RESPONSIVE (móviles) ====================================== */

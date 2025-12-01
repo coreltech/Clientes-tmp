@@ -8,6 +8,8 @@
 
 /* === 1. VARIABLES Y TIPOGRAFÍA ====================================== */
 :root {
+  --footer-bg: #b877c9; /* nuevo color de footer */
+  --blanco: #ffffff;
   --morado: #903AA8;
   --beige: #F8F5F2;
   --negro: #3E2723;
@@ -396,7 +398,7 @@ h1, h2, h3, .highlight {
 }
 /* === 9. FOOTER ===================================================== */
 .footer {
-  background: var(--negro);
+  background: var(--footer-bg);
   color: var(--beige);
   padding: 30px 0 15px;
   font-size: 0.85em;
@@ -417,17 +419,17 @@ h1, h2, h3, .highlight {
 }
 
 .footer-contact a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 
 .social-links a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 
 .footer-legal a {
-  color: var(--morado);
+  color: var(--blanco);
   text-decoration: none;
 }
 /* === 10. WHATSAPP FLUTUANTE ======================================== */
