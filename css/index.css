@@ -234,7 +234,7 @@ h1, h2, h3, .highlight {
   max-width: 90%;
   text-align: center;
   left: 75%;
-  top: 5%;
+  top: 15%;
   transform: translateX(-50%);
   margin: 0;
   white-space: nowrap;
@@ -276,10 +276,10 @@ h1, h2, h3, .highlight {
 /* === 5. CAMINOS ESPIRITUALES (2x2) ================================= */
 .spiritual-paths-intro {
   text-align: center;
-  max-width: 700px;
+  max-width: 900px;
   margin: 20px auto 50px;
   color: var(--gris-oscuro);
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 .spiritual-paths-grid {
@@ -298,12 +298,12 @@ h1, h2, h3, .highlight {
 }
 
 .path-card-content:hover {
-  transform: translateY(-5px);
+  transform: translateY(10px);
 }
 
 .path-card-img {
   width: 100%;
-  height: 180px;
+  height: 380px;
   object-fit: cover;
 }
 
@@ -750,4 +750,8 @@ blockquote {
 
 .testimonial-card blockquote p {
   margin: 0 0 0.8em 0;     /* Elimina márgenes por defecto y controla el espaciamiento */
+}
+/* En tu index.css, agrega esto al final: */
+.path-card:nth-child(3) .path-card-img {
+  object-position: 50% 30%; /* Horizontal 50%, Vertical 30% */
 }

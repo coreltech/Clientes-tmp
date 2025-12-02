@@ -210,7 +210,7 @@ h1, h2, h3, .highlight {
   max-width: 800px;
   text-align: center;
   left: 50%;
-  top: 5%;
+  top: 15%;
   transform: translateX(-50%);
   margin: 0;
   white-space: nowrap;
@@ -228,7 +228,7 @@ h1, h2, h3, .highlight {
   max-width: 900px;
   text-align: center;
   left: 50%;
-  top: 20%;
+  top: 29%;
   transform: translateX(-50%);
   margin: 0;
   white-space: nowrap;
